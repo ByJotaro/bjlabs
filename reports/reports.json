@@ -1,5 +1,359 @@
 [
  {
+  "domain": "0215.md",
+  "slug": "0215-md",
+  "score": 91,
+  "url": "reports/0215-md.html"
+ },
+ {
+  "domain": "100letnik.md",
+  "slug": "100letnik-md",
+  "score": 70,
+  "url": "reports/100letnik-md.html"
+ },
+ {
+  "domain": "3puti.md",
+  "slug": "3puti-md",
+  "score": 67,
+  "url": "reports/3puti-md.html"
+ },
+ {
+  "domain": "555market.md",
+  "slug": "555market-md",
+  "score": 58,
+  "url": "reports/555market-md.html"
+ },
+ {
+  "domain": "academy.fc-sheriff.com",
+  "slug": "academy-fc-sheriff-com",
+  "score": 71,
+  "url": "reports/academy-fc-sheriff-com.html"
+ },
+ {
+  "domain": "advantis.md",
+  "slug": "advantis-md",
+  "score": 76,
+  "url": "reports/advantis-md.html"
+ },
+ {
+  "domain": "advokatpmr.ru",
+  "slug": "advokatpmr-ru",
+  "score": 56,
+  "url": "reports/advokatpmr-ru.html"
+ },
+ {
+  "domain": "agromeh.com",
+  "slug": "agromeh-com",
+  "score": 77,
+  "url": "reports/agromeh-com.html"
+ },
+ {
+  "domain": "aiva.group",
+  "slug": "aiva-group",
+  "score": 67,
+  "url": "reports/aiva-group.html"
+ },
+ {
+  "domain": "alx.md",
+  "slug": "alx-md",
+  "score": 67,
+  "url": "reports/alx-md.html"
+ },
+ {
+  "domain": "anfilada.info",
+  "slug": "anfilada-info",
+  "score": 83,
+  "url": "reports/anfilada-info.html"
+ },
+ {
+  "domain": "ankom-pmr.com",
+  "slug": "ankom-pmr-com",
+  "score": 77,
+  "url": "reports/ankom-pmr-com.html"
+ },
+ {
+  "domain": "antizuk.com",
+  "slug": "antizuk-com",
+  "score": 65,
+  "url": "reports/antizuk-com.html"
+ },
+ {
+  "domain": "ao-electromash.ru",
+  "slug": "ao-electromash-ru",
+  "score": 64,
+  "url": "reports/ao-electromash-ru.html"
+ },
+ {
+  "domain": "aommz.com",
+  "slug": "aommz-com",
+  "score": 74,
+  "url": "reports/aommz-com.html"
+ },
+ {
+  "domain": "aptekadoktor.com",
+  "slug": "aptekadoktor-com",
+  "score": 61,
+  "url": "reports/aptekadoktor-com.html"
+ },
+ {
+  "domain": "aquadom.md",
+  "slug": "aquadom-md",
+  "score": 73,
+  "url": "reports/aquadom-md.html"
+ },
+ {
+  "domain": "aquatir.md",
+  "slug": "aquatir-md",
+  "score": 65,
+  "url": "reports/aquatir-md.html"
+ },
+ {
+  "domain": "arhdiz.com",
+  "slug": "arhdiz-com",
+  "score": 59,
+  "url": "reports/arhdiz-com.html"
+ },
+ {
+  "domain": "artstil.md",
+  "slug": "artstil-md",
+  "score": 64,
+  "url": "reports/artstil-md.html"
+ },
+ {
+  "domain": "asop.md",
+  "slug": "asop-md",
+  "score": 74,
+  "url": "reports/asop-md.html"
+ },
+ {
+  "domain": "aureola.online",
+  "slug": "aureola-online",
+  "score": 61,
+  "url": "reports/aureola-online.html"
+ },
+ {
+  "domain": "auto-red.ru",
+  "slug": "auto-red-ru",
+  "score": 79,
+  "url": "reports/auto-red-ru.html"
+ },
+ {
+  "domain": "autoreal.md",
+  "slug": "autoreal-md",
+  "score": 68,
+  "url": "reports/autoreal-md.html"
+ },
+ {
+  "domain": "autotuning.md",
+  "slug": "autotuning-md",
+  "score": 80,
+  "url": "reports/autotuning-md.html"
+ },
+ {
+  "domain": "avtokran-pmr.ru",
+  "slug": "avtokran-pmr-ru",
+  "score": 70,
+  "url": "reports/avtokran-pmr-ru.html"
+ },
+ {
+  "domain": "avtoservis-pmr.ru",
+  "slug": "avtoservis-pmr-ru",
+  "score": 53,
+  "url": "reports/avtoservis-pmr-ru.html"
+ },
+ {
+  "domain": "b2b.idc.md",
+  "slug": "b2b-idc-md",
+  "score": 50,
+  "url": "reports/b2b-idc-md.html"
+ },
+ {
+  "domain": "barkar.ru",
+  "slug": "barkar-ru",
+  "score": 92,
+  "url": "reports/barkar-ru.html"
+ },
+ {
+  "domain": "bashmak.md",
+  "slug": "bashmak-md",
+  "score": 52,
+  "url": "reports/bashmak-md.html"
+ },
+ {
+  "domain": "bastion-pmr.com",
+  "slug": "bastion-pmr-com",
+  "score": 80,
+  "url": "reports/bastion-pmr-com.html"
+ },
+ {
+  "domain": "belar.md",
+  "slug": "belar-md",
+  "score": 48,
+  "url": "reports/belar-md.html"
+ },
+ {
+  "domain": "bendery-fortress.com",
+  "slug": "bendery-fortress-com",
+  "score": 74,
+  "url": "reports/bendery-fortress-com.html"
+ },
+ {
+  "domain": "betonplus.info",
+  "slug": "betonplus-info",
+  "score": 52,
+  "url": "reports/betonplus-info.html"
+ },
+ {
+  "domain": "biletpmr.com",
+  "slug": "biletpmr-com",
+  "score": 62,
+  "url": "reports/biletpmr-com.html"
+ },
+ {
+  "domain": "billioneir.ru",
+  "slug": "billioneir-ru",
+  "score": 61,
+  "url": "reports/billioneir-ru.html"
+ },
+ {
+  "domain": "birja.md",
+  "slug": "birja-md",
+  "score": 89,
+  "url": "reports/birja-md.html"
+ },
+ {
+  "domain": "bitmebel.com",
+  "slug": "bitmebel-com",
+  "score": 79,
+  "url": "reports/bitmebel-com.html"
+ },
+ {
+  "domain": "blagoda.md",
+  "slug": "blagoda-md",
+  "score": 68,
+  "url": "reports/blagoda-md.html"
+ },
+ {
+  "domain": "bmk.md",
+  "slug": "bmk-md",
+  "score": 59,
+  "url": "reports/bmk-md.html"
+ },
+ {
+  "domain": "bmw-zapchast.ru",
+  "slug": "bmw-zapchast-ru",
+  "score": 45,
+  "url": "reports/bmw-zapchast-ru.html"
+ },
+ {
+  "domain": "bonvoyage.md",
+  "slug": "bonvoyage-md",
+  "score": 73,
+  "url": "reports/bonvoyage-md.html"
+ },
+ {
+  "domain": "broker.tiraspol.net",
+  "slug": "broker-tiraspol-net",
+  "score": 88,
+  "url": "reports/broker-tiraspol-net.html"
+ },
+ {
+  "domain": "btenergo.org",
+  "slug": "btenergo-org",
+  "score": 71,
+  "url": "reports/btenergo-org.html"
+ },
+ {
+  "domain": "bti-pmr.ru",
+  "slug": "bti-pmr-ru",
+  "score": 62,
+  "url": "reports/bti-pmr-ru.html"
+ },
+ {
+  "domain": "canel.md",
+  "slug": "canel-md",
+  "score": 68,
+  "url": "reports/canel-md.html"
+ },
+ {
+  "domain": "carprodt.com",
+  "slug": "carprodt-com",
+  "score": 52,
+  "url": "reports/carprodt-com.html"
+ },
+ {
+  "domain": "centr-klimata.md",
+  "slug": "centr-klimata-md",
+  "score": 77,
+  "url": "reports/centr-klimata-md.html"
+ },
+ {
+  "domain": "centrelux.com",
+  "slug": "centrelux-com",
+  "score": 82,
+  "url": "reports/centrelux-com.html"
+ },
+ {
+  "domain": "chamber.md",
+  "slug": "chamber-md",
+  "score": 70,
+  "url": "reports/chamber-md.html"
+ },
+ {
+  "domain": "cipcons.com",
+  "slug": "cipcons-com",
+  "score": 79,
+  "url": "reports/cipcons-com.html"
+ },
+ {
+  "domain": "cityclub.md",
+  "slug": "cityclub-md",
+  "score": 73,
+  "url": "reports/cityclub-md.html"
+ },
+ {
+  "domain": "compline.md",
+  "slug": "compline-md",
+  "score": 55,
+  "url": "reports/compline-md.html"
+ },
+ {
+  "domain": "conserve.md",
+  "slug": "conserve-md",
+  "score": 80,
+  "url": "reports/conserve-md.html"
+ },
+ {
+  "domain": "cun.md",
+  "slug": "cun-md",
+  "score": 74,
+  "url": "reports/cun-md.html"
+ },
+ {
+  "domain": "darimed.md",
+  "slug": "darimed-md",
+  "score": 73,
+  "url": "reports/darimed-md.html"
+ },
+ {
+  "domain": "decorcentr.com",
+  "slug": "decorcentr-com",
+  "score": 77,
+  "url": "reports/decorcentr-com.html"
+ },
+ {
+  "domain": "dedpihto.md",
+  "slug": "dedpihto-md",
+  "score": 68,
+  "url": "reports/dedpihto-md.html"
+ },
+ {
+  "domain": "delident.ru",
+  "slug": "delident-ru",
+  "score": 82,
+  "url": "reports/delident-ru.html"
+ },
+ {
   "domain": "dentis.md",
   "slug": "dentis-md",
   "score": 62,
@@ -12,10 +366,118 @@
   "url": "reports/dentpark-md.html"
  },
  {
+  "domain": "dentpmr.com",
+  "slug": "dentpmr-com",
+  "score": 58,
+  "url": "reports/dentpmr-com.html"
+ },
+ {
+  "domain": "dex-it.ru",
+  "slug": "dex-it-ru",
+  "score": 70,
+  "url": "reports/dex-it-ru.html"
+ },
+ {
+  "domain": "dhl.md",
+  "slug": "dhl-md",
+  "score": 59,
+  "url": "reports/dhl-md.html"
+ },
+ {
   "domain": "diplomat-med.md",
   "slug": "diplomat-med-md",
   "score": 77,
   "url": "reports/diplomat-med-md.html"
+ },
+ {
+  "domain": "dnestrenergo.md",
+  "slug": "dnestrenergo-md",
+  "score": 91,
+  "url": "reports/dnestrenergo-md.html"
+ },
+ {
+  "domain": "dnestrzori.com",
+  "slug": "dnestrzori-com",
+  "score": 55,
+  "url": "reports/dnestrzori-com.html"
+ },
+ {
+  "domain": "dobrova.org",
+  "slug": "dobrova-org",
+  "score": 67,
+  "url": "reports/dobrova-org.html"
+ },
+ {
+  "domain": "doctor-mazur.com",
+  "slug": "doctor-mazur-com",
+  "score": 62,
+  "url": "reports/doctor-mazur-com.html"
+ },
+ {
+  "domain": "domokon.net",
+  "slug": "domokon-net",
+  "score": 85,
+  "url": "reports/domokon-net.html"
+ },
+ {
+  "domain": "drive-avto.md",
+  "slug": "drive-avto-md",
+  "score": 68,
+  "url": "reports/drive-avto-md.html"
+ },
+ {
+  "domain": "duval.md",
+  "slug": "duval-md",
+  "score": 76,
+  "url": "reports/duval-md.html"
+ },
+ {
+  "domain": "e-apteka.md",
+  "slug": "e-apteka-md",
+  "score": 52,
+  "url": "reports/e-apteka-md.html"
+ },
+ {
+  "domain": "echiprot.com",
+  "slug": "echiprot-com",
+  "score": 52,
+  "url": "reports/echiprot-com.html"
+ },
+ {
+  "domain": "eco-okna.md",
+  "slug": "eco-okna-md",
+  "score": 48,
+  "url": "reports/eco-okna-md.html"
+ },
+ {
+  "domain": "ecorodals.com",
+  "slug": "ecorodals-com",
+  "score": 80,
+  "url": "reports/ecorodals-com.html"
+ },
+ {
+  "domain": "edapmr.com",
+  "slug": "edapmr-com",
+  "score": 68,
+  "url": "reports/edapmr-com.html"
+ },
+ {
+  "domain": "edem.md",
+  "slug": "edem-md",
+  "score": 68,
+  "url": "reports/edem-md.html"
+ },
+ {
+  "domain": "electronica.othod.org",
+  "slug": "electronica-othod-org",
+  "score": 76,
+  "url": "reports/electronica-othod-org.html"
+ },
+ {
+  "domain": "elpro.md",
+  "slug": "elpro-md",
+  "score": 55,
+  "url": "reports/elpro-md.html"
  },
  {
   "domain": "example.com",
