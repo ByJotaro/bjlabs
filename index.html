@@ -109,7 +109,9 @@
 
   @media (max-width:900px){
     .grid3,.steps,.proof,.contact{grid-template-columns:1fr}
-    nav{display:none}
+    header .wrap{height:auto;flex-wrap:wrap;padding-top:10px;padding-bottom:8px}
+    nav{display:flex;order:3;width:100%;gap:14px;overflow-x:auto;font-size:13px}
+    .hdr-cta{margin-left:auto}
   }
   @media (max-width:480px){
     .hero{padding:48px 0 40px}
@@ -220,7 +222,7 @@
 <section class="alt" id="proof">
   <div class="wrap">
     <h2>Пример отчёта</h2>
-    <p class="lead">Реальный публичный сайт, реальный скор. Внутри — таблица проверок и приоритетные правки.</p>
+    <p class="lead">Так выглядит отчёт: таблица 25 проверок, скор 0–100 и приоритетные правки. Демо на тестовом домене.</p>
     <div class="proof">
       <div class="shot">
         <div class="shot-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
