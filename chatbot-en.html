@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI assistant for your website — answers from your own pages | BJ Labs</title>
+<meta name="description" content="A website assistant that answers customer questions 24/7 using your own pages: services, prices, timelines. No invented prices; hand-off to a human. Live in one day.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F766E'/><text x='50' y='68' font-size='46' font-family='sans-serif' fill='white' text-anchor='middle'>BJ</text></svg>">
+<style>
+  :root{--bg:#fff;--surface:#F5F7FA;--hair:#E6EAF0;--ink:#0F172A;--muted:#475569;--accent:#0F766E;--accent-h:#0B5F59}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--hair);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);z-index:10}
+  .hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+  .logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--ink)}
+  .logo b{color:var(--accent)}
+  .hdr-cta{background:var(--accent);color:#fff;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:600;font-size:14px}
+  .hero{padding:60px 0 34px}
+  .badge{display:inline-block;background:#ECFDF5;color:var(--accent);border:1px solid #CCFBF1;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;margin-bottom:16px}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em}
+  .hero p{font-size:19px;color:var(--muted);max-width:62ch;margin:0 0 24px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:13px 22px;border-radius:10px;font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:30px 0}
+  .card{background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:20px}
+  .card h3{margin:0 0 8px;font-size:16px}
+  .card p{margin:0;color:var(--muted);font-size:14px}
+  h2{font-size:clamp(22px,3vw,30px);margin:44px 0 12px;letter-spacing:-.01em}
+  .price{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:18px 0}
+  .price .card{background:#fff}
+  .num{font-size:30px;font-weight:800;letter-spacing:-.02em}
+  .num small{font-size:13px;font-weight:500;color:var(--muted)}
+  ul.ticks{list-style:none;padding:0;margin:10px 0 0}
+  ul.ticks li{padding-left:24px;position:relative;margin:6px 0;font-size:14px;color:var(--muted)}
+  ul.ticks li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .steps{counter-reset:s;padding:0;list-style:none}
+  .steps li{counter-increment:s;margin:12px 0;padding-left:40px;position:relative}
+  .steps li:before{content:counter(s);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center}
+  .dialog{background:#F8FAFC;border:1px solid var(--hair);border-radius:14px;padding:18px;max-width:640px}
+  .bubble{max-width:85%;padding:9px 12px;border-radius:12px;margin:8px 0;font-size:14px}
+  .u{margin-left:auto;background:var(--accent);color:#fff;border-bottom-right-radius:4px}
+  .a{background:#fff;border:1px solid var(--hair);border-bottom-left-radius:4px}
+  .note{font-size:12px;color:var(--muted);margin-top:8px}
+  details{border-bottom:1px solid var(--hair);padding:12px 0}
+  summary{cursor:pointer;font-weight:600}
+  details p{color:var(--muted);margin:8px 0 0}
+  footer{border-top:1px solid var(--hair);padding:24px 0;color:var(--muted);font-size:13px;margin-top:40px}
+</style>
+</head>
+<body>
+<header><div class="wrap hdr"><a class="logo" href="index.html">BJ <b>Labs</b></a><a class="hdr-cta" href="mailto:bay.harbor.144@gmail.com?subject=AI%20assistant%20demo">Request a demo</a></div></header>
+<main class="wrap">
+  <section class="hero">
+    <span class="badge">Live in one day · no invented prices</span>
+    <h1>An assistant that answers from your website</h1>
+    <p>Answers customer questions 24/7 about services, prices and timelines — strictly from your own pages. When it doesn't know, it hands the conversation to a human. Leads arrive by email or Telegram.</p>
+    <a class="btn" href="mailto:bay.harbor.144@gmail.com?subject=AI%20assistant%20demo">Request a demo</a>
+  </section>
+
+  <div class="grid">
+    <div class="card"><h3>Grounded answers</h3><p>Every reply cites a fragment of your page. No answer — no guessing: it offers a human contact.</p></div>
+    <div class="card"><h3>One script tag</h3><p>Works on any site: WordPress, Webflow, Tilda, custom. No backend changes.</p></div>
+    <div class="card"><h3>See the questions</h3><p>You get the list of what customers ask most — ready-made FAQ and content ideas.</p></div>
+  </div>
+
+  <h2>Sample dialog</h2>
+  <div class="dialog">
+    <div class="bubble u">How much is the audit?</div>
+    <div class="bubble a">25 checks with a 0–100 score. Fix: €60 for the 3 critical issues (1–2 days) or €90 for the full pack (2–3 days). For details: bay.harbor.144@gmail.com.</div>
+    <div class="bubble u">Can you work without access to my site?</div>
+    <div class="bubble a">Yes — I send ready-to-paste files and instructions, you apply them. Included in the pack.</div>
+    <div class="note">Excerpt from a real session with the BJ Labs demo assistant.</div>
+  </div>
+
+  <h2>Pricing</h2>
+  <div class="price">
+    <div class="card">
+      <div class="num">$220 <small>one-time</small></div>
+      <p>Start: 20–50 pages, widget, contacts, one language, live in one day.</p>
+      <ul class="ticks"><li>Answers from your pages</li><li>Human hand-off</li><li>Question analytics</li></ul>
+      <p style="margin-top:12px"><b>$35/mo</b> — hosting, monitoring, one content update.</p>
+    </div>
+    <div class="card">
+      <div class="num">$550 <small>+ $95/mo</small></div>
+      <p>Business: Telegram/WhatsApp bot with CRM leads, catalog or booking.</p>
+      <ul class="ticks"><li>CRM integration</li><li>Booking / catalog / payments</li><li>Hand-off to a manager</li></ul>
+    </div>
+  </div>
+
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li>Send your site URL and pages (or sitemap).</li>
+    <li>I index the text, tune tone, contacts and rules — 2–4 hours.</li>
+    <li>You paste one <code>&lt;script&gt;</code> tag into the site.</li>
+    <li>We test 20 questions; you get access and analytics.</li>
+  </ol>
+
+  <h2>FAQ</h2>
+  <details><summary>Which languages?</summary><p>English, Russian, Romanian — matching the question. Can be locked to one language.</p></details>
+  <details><summary>What if it doesn't know?</summary><p>It says it will check with a human and gives your contact; the question is logged.</p></details>
+  <details><summary>Where is it hosted?</summary><p>On a server I maintain; data is your pages plus the question log. For EU/US clients I can deploy on your host.</p></details>
+  <details><summary>Payments</summary><p>PayPal invoice, bank transfer (EU), or Western Union. USD/EUR.</p></details>
+</main>
+<footer><div class="wrap">BJ Labs · <a href="mailto:bay.harbor.144@gmail.com">bay.harbor.144@gmail.com</a> · <a href="index.html">services</a> · <a href="chatbot.html">Русский</a></div></footer>
+</body>
+</html>

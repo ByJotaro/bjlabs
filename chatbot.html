@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-ассистент для сайта — отвечает по вашим страницам | BJ Labs</title>
+<meta name="description" content="Ассистент на сайте отвечает клиентам 24/7 по вашим страницам: услуги, цены, сроки. Без выдуманных цен, заявки на почту или в Telegram. Запуск за 1 день.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F766E'/><text x='50' y='68' font-size='46' font-family='sans-serif' fill='white' text-anchor='middle'>BJ</text></svg>">
+<style>
+  :root{--bg:#fff;--surface:#F5F7FA;--hair:#E6EAF0;--ink:#0F172A;--muted:#475569;--accent:#0F766E;--accent-h:#0B5F59}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--hair);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);z-index:10}
+  .hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+  .logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--ink)}
+  .logo b{color:var(--accent)}
+  .hdr-cta{background:var(--accent);color:#fff;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:600;font-size:14px}
+  .hdr-cta:hover{background:var(--accent-h)}
+  .hero{padding:60px 0 34px}
+  .badge{display:inline-block;background:#ECFDF5;color:var(--accent);border:1px solid #CCFBF1;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;margin-bottom:16px}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em}
+  .hero p{font-size:19px;color:var(--muted);max-width:62ch;margin:0 0 24px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:13px 22px;border-radius:10px;font-weight:600}
+  .btn:hover{background:var(--accent-h)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:30px 0}
+  .card{background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:20px}
+  .card h3{margin:0 0 8px;font-size:16px}
+  .card p{margin:0;color:var(--muted);font-size:14px}
+  h2{font-size:clamp(22px,3vw,30px);margin:44px 0 12px;letter-spacing:-.01em}
+  .price{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:18px 0}
+  .price .card{background:#fff}
+  .num{font-size:30px;font-weight:800;letter-spacing:-.02em}
+  .num small{font-size:13px;font-weight:500;color:var(--muted)}
+  ul.ticks{list-style:none;padding:0;margin:10px 0 0}
+  ul.ticks li{padding-left:24px;position:relative;margin:6px 0;font-size:14px;color:var(--muted)}
+  ul.ticks li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .steps{counter-reset:s;padding:0;list-style:none}
+  .steps li{counter-increment:s;margin:12px 0;padding-left:40px;position:relative}
+  .steps li:before{content:counter(s);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center}
+  .dialog{background:#F8FAFC;border:1px solid var(--hair);border-radius:14px;padding:18px;max-width:640px}
+  .bubble{max-width:85%;padding:9px 12px;border-radius:12px;margin:8px 0;font-size:14px}
+  .u{margin-left:auto;background:var(--accent);color:#fff;border-bottom-right-radius:4px}
+  .a{background:#fff;border:1px solid var(--hair);border-bottom-left-radius:4px}
+  .note{font-size:12px;color:var(--muted);margin-top:8px}
+  details{border-bottom:1px solid var(--hair);padding:12px 0}
+  summary{cursor:pointer;font-weight:600}
+  details p{color:var(--muted);margin:8px 0 0}
+  footer{border-top:1px solid var(--hair);padding:24px 0;color:var(--muted);font-size:13px;margin-top:40px}
+  code{font-family:ui-monospace,Consolas,monospace;background:var(--surface);padding:2px 6px;border-radius:6px;font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="wrap hdr"><a class="logo" href="index.html">BJ <b>Labs</b></a><a class="hdr-cta" href="mailto:bay.harbor.144@gmail.com?subject=AI-ассистент%20для%20сайта">Запросить демо</a></div></header>
+<main class="wrap">
+  <section class="hero">
+    <span class="badge">Запуск за 1 день · без выдуманных цен</span>
+    <h1>Ассистент, который отвечает по вашему сайту</h1>
+    <p>Отвечает клиентам 24/7 на вопросы об услугах, ценах и сроках — строго по вашим страницам. Не знает ответа — передаёт контакт человеку. Заявки приходят на почту или в Telegram.</p>
+    <a class="btn" href="mailto:bay.harbor.144@gmail.com?subject=AI-ассистент%20для%20сайта">Запросить демо</a>
+  </section>
+
+  <div class="grid">
+    <div class="card"><h3>Без галлюцинаций</h3><p>Каждый ответ опирается на фрагмент вашей страницы. Нет ответа — ассистент не придумывает, а зовёт человека.</p></div>
+    <div class="card"><h3>Один скрипт на сайте</h3><p>Виджет ставится одной строкой. Работает на любом сайте: Tilda, WordPress, самописный.</p></div>
+    <div class="card"><h3>Видно вопросы</h3><p>Вы получаете список того, что спрашивают чаще всего, — готовые темы для FAQ и контента.</p></div>
+  </div>
+
+  <h2>Пример диалога</h2>
+  <div class="dialog">
+    <div class="bubble u">Сколько стоит аудит?</div>
+    <div class="bubble a">Аудит — 25 проверок и отчёт со скором 0–100. Фикс: €60 за 3 критичных правки (1–2 дня) или €90 за полный пакет (2–3 дня). Точнее — напишите на bay.harbor.144@gmail.com.</div>
+    <div class="bubble u">А если у меня нет доступа к сайту?</div>
+    <div class="bubble a">Можно работать без доступа: присылаю готовые файлы и инструкцию, вы вставляете сами. Входит в пакет.</div>
+    <div class="note">Фрагмент реального диалога с демо-ассистентом BJ Labs.</div>
+  </div>
+
+  <h2>Сколько стоит</h2>
+  <div class="price">
+    <div class="card">
+      <div class="num">€190 <small>разово</small></div>
+      <p>Старт: 20–50 страниц, виджет, контакты, 1 язык, запуск 1 день.</p>
+      <ul class="ticks"><li>Ответы по страницам сайта</li><li>Передача контакта человеку</li><li>Статистика вопросов</li></ul>
+      <p style="margin-top:12px"><b>€30/мес</b> — хостинг, наблюдение, 1 обновление контента.</p>
+      <p style="margin-top:8px;font-size:13px">Для РФ: <b>18 000 ₽</b> + <b>2 900 ₽/мес</b>, оплата в рублях.</p>
+    </div>
+    <div class="card">
+      <div class="num">€490 <small>+ €85/мес</small></div>
+      <p>Бизнес: Telegram/WhatsApp-бот с заявками в CRM, каталогом или записью.</p>
+      <ul class="ticks"><li>Интеграция с CRM</li><li>Запись/каталог/оплата</li><li>Передача диалога менеджеру</li></ul>
+      <p style="margin-top:12px;font-size:13px">Для РФ: <b>45 000 ₽</b> + <b>7 900 ₽/мес</b>.</p>
+    </div>
+  </div>
+
+  <h2>Как это работает</h2>
+  <ol class="steps">
+    <li>Присылаете ссылку на сайт и страницы (или sitemap).</li>
+    <li>Индексирую текст, настраиваю тон, контакты и правила — 2–4 часа.</li>
+    <li>Вставляете <code>&lt;script src="…/widget.js"&gt;</code> на сайт.</li>
+    <li>Проверяем 20 вопросами, передаю доступ и статистику.</li>
+  </ol>
+
+  <h2>Вопросы</h2>
+  <details><summary>На каких языках отвечает?</summary><p>Русский, английский, румынский — по языку вопроса. Можно ограничить одним языком.</p></details>
+  <details><summary>Что если ассистент не знает ответ?</summary><p>Он не придумывает: пишет, что уточнит у человека, и даёт ваш контакт. Вопрос попадает в статистику.</p></details>
+  <details><summary>Где хостится?</summary><p>На сервере, который я обслуживаю; данные — только ваши страницы и журнал вопросов. Для ЕС/США могу развернуть у вашего хостера.</p></details>
+  <details><summary>Как оплатить из РФ?</summary><p>В рублях: Unistream на имя получателя в Тирасполе или перевод на карту РФ — по согласованию. Для ЕС/США — PayPal по инвойсу или банковский перевод.</p></details>
+  <details><summary>Сроки</summary><p>Старт — 1 день после получения страниц. Бизнес-вариант с CRM — 3–5 дней.</p></details>
+</main>
+<footer><div class="wrap">BJ Labs · <a href="mailto:bay.harbor.144@gmail.com">bay.harbor.144@gmail.com</a> · <a href="index.html">услуги</a> · <a href="chatbot-en.html">English</a></div></footer>
+</body>
+</html>
