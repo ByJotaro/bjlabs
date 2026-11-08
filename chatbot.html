@@ -4,111 +4,257 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI-ассистент для сайта — отвечает по вашим страницам | BJ Labs</title>
-<meta name="description" content="Ассистент на сайте отвечает клиентам 24/7 по вашим страницам: услуги, цены, сроки. Без выдуманных цен, заявки на почту или в Telegram. Запуск за 1 день.">
+<meta name="description" content="Ассистент отвечает клиентам по страницам сайта, цитирует источник и передаёт диалог человеку, когда ответа нет. Запуск за день, один скрипт на сайте.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F766E'/><text x='50' y='68' font-size='46' font-family='sans-serif' fill='white' text-anchor='middle'>BJ</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#fff;--surface:#F5F7FA;--hair:#E6EAF0;--ink:#0F172A;--muted:#475569;--accent:#0F766E;--accent-h:#0B5F59}
+  :root{
+    --bg:#161513; --deep:#12110f; --card:#1c1a18; --raised:#262421;
+    --text:#efe9de; --secondary:#aaa398; --muted:#8a847a;
+    --line:rgba(239,233,222,.08); --line-strong:rgba(239,233,222,.14);
+    --accent:#5eead4;
+    --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}
-  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
-  header{border-bottom:1px solid var(--hair);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);z-index:10}
-  .hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
-  .logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--ink)}
-  .logo b{color:var(--accent)}
-  .hdr-cta{background:var(--accent);color:#fff;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:600;font-size:14px}
-  .hdr-cta:hover{background:var(--accent-h)}
-  .hero{padding:60px 0 34px}
-  .badge{display:inline-block;background:#ECFDF5;color:var(--accent);border:1px solid #CCFBF1;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;margin-bottom:16px}
-  h1{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em}
-  .hero p{font-size:19px;color:var(--muted);max-width:62ch;margin:0 0 24px}
-  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:13px 22px;border-radius:10px;font-weight:600}
-  .btn:hover{background:var(--accent-h)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:30px 0}
-  .card{background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:20px}
-  .card h3{margin:0 0 8px;font-size:16px}
-  .card p{margin:0;color:var(--muted);font-size:14px}
-  h2{font-size:clamp(22px,3vw,30px);margin:44px 0 12px;letter-spacing:-.01em}
-  .price{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:18px 0}
-  .price .card{background:#fff}
-  .num{font-size:30px;font-weight:800;letter-spacing:-.02em}
-  .num small{font-size:13px;font-weight:500;color:var(--muted)}
-  ul.ticks{list-style:none;padding:0;margin:10px 0 0}
-  ul.ticks li{padding-left:24px;position:relative;margin:6px 0;font-size:14px;color:var(--muted)}
-  ul.ticks li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
-  .steps{counter-reset:s;padding:0;list-style:none}
-  .steps li{counter-increment:s;margin:12px 0;padding-left:40px;position:relative}
-  .steps li:before{content:counter(s);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center}
-  .dialog{background:#F8FAFC;border:1px solid var(--hair);border-radius:14px;padding:18px;max-width:640px}
-  .bubble{max-width:85%;padding:9px 12px;border-radius:12px;margin:8px 0;font-size:14px}
-  .u{margin-left:auto;background:var(--accent);color:#fff;border-bottom-right-radius:4px}
-  .a{background:#fff;border:1px solid var(--hair);border-bottom-left-radius:4px}
-  .note{font-size:12px;color:var(--muted);margin-top:8px}
-  details{border-bottom:1px solid var(--hair);padding:12px 0}
-  summary{cursor:pointer;font-weight:600}
-  details p{color:var(--muted);margin:8px 0 0}
-  footer{border-top:1px solid var(--hair);padding:24px 0;color:var(--muted);font-size:13px;margin-top:40px}
-  code{font-family:ui-monospace,Consolas,monospace;background:var(--surface);padding:2px 6px;border-radius:6px;font-size:13px}
+  html{overflow-x:hidden}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+  a{color:inherit}
+  ::selection{background:rgba(94,234,212,.22)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line)}
+  .logo{font-size:18px;font-weight:500;text-decoration:none;letter-spacing:0}
+  .logo b{color:var(--accent);font-weight:500}
+  .nav-cta{display:inline-flex;align-items:center;height:36px;padding:0 16px;border-radius:8px;border:1px solid var(--line-strong);background:var(--raised);color:var(--text);text-decoration:none;font-size:14px;font-weight:500;transition:background-color .14s var(--ease),border-color .14s var(--ease)}
+  .nav-cta:hover{background:#2e2b27;border-color:rgba(239,233,222,.2)}
+
+  .hero{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:64px;align-items:center;padding:96px 0 96px}
+  .eyebrow{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:0}
+  h1{font-size:clamp(36px,3.6vw,50px);line-height:1.04;letter-spacing:-.03em;font-weight:500;margin:16px 0 20px;text-wrap:balance}
+  .lead{font-size:18px;line-height:1.55;color:var(--secondary);max-width:34rem;margin:0 0 28px}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 20px;border-radius:10px;font-size:15px;font-weight:500;text-decoration:none;transition:background-color .14s var(--ease),color .14s var(--ease),transform .14s var(--ease)}
+  .btn:active{transform:scale(.98)}
+  .btn-primary{background:var(--text);color:var(--bg)}
+  .btn-primary:hover{background:#fff8ec}
+  .btn-secondary{background:var(--raised);color:var(--text);border:1px solid var(--line-strong)}
+  .btn-secondary:hover{background:#2e2b27;border-color:rgba(239,233,222,.2)}
+  .note{font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--muted);margin:16px 0 0;max-width:34rem}
+
+  .preview{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 24px 64px rgba(0,0,0,.32);min-width:0}
+  .preview figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:16px}
+  .pv-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .pv-title{font-family:var(--mono);font-size:12px;color:var(--secondary);font-weight:400}
+  .pv-tag{font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .pv-q{justify-self:end;max-width:82%;margin:20px 0 0 auto;background:var(--raised);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;color:var(--secondary)}
+  .pv-a{margin:16px 0 0;font-size:15px;line-height:1.55;max-width:52ch}
+  .pv-src{margin-top:14px;padding-left:10px;border-left:2px solid var(--accent);font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--accent)}
+  .pv-input{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;height:44px;padding:0 12px 0 14px;border:1px solid var(--line-strong);border-radius:10px;color:var(--muted);font-size:14px}
+  .pv-send{display:grid;place-items:center;width:28px;height:28px;border:0;border-radius:6px;background:var(--raised);color:var(--accent)}
+
+  section{padding:80px 0 0}
+  h2{font-size:clamp(24px,2.6vw,32px);line-height:1.15;letter-spacing:-.01em;font-weight:500;margin:0 0 12px}
+  .section-note{color:var(--secondary);max-width:60ch;margin:0 0 32px;font-size:15px}
+
+  .features{display:grid;grid-template-columns:1.3fr .85fr .85fr;gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;min-width:0}
+  .card h3{font-size:16px;font-weight:500;margin:0 0 8px}
+  .card p{margin:0;color:var(--secondary);font-size:14px;line-height:1.55}
+  .mini-src{margin-top:16px;padding-left:10px;border-left:2px solid var(--accent);font-family:var(--mono);font-size:11px;line-height:1.6;color:var(--accent)}
+
+  .sample{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+  .handoff{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+  .handoff .q{margin:0 0 16px;color:var(--secondary);font-size:14px}
+  .handoff .q b{display:block;font-family:var(--mono);font-size:11px;font-weight:400;color:var(--muted);margin-bottom:6px}
+  .handoff .a{margin:0;font-size:15px;line-height:1.55}
+  .handoff .log{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .handoff .log b{color:var(--accent);font-weight:400}
+
+  .plans{display:grid;grid-template-columns:1.25fr .9fr;gap:16px;align-items:start}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;min-width:0}
+  .plan-label{font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .price{display:flex;align-items:baseline;gap:8px;margin:12px 0 4px;font-variant-numeric:tabular-nums}
+  .price .num{font-size:32px;font-weight:500;letter-spacing:-.01em;line-height:1}
+  .price .per{font-size:13px;color:var(--muted)}
+  .plan-sub{color:var(--secondary);font-size:14px;margin:0 0 16px}
+  .plan ul{list-style:none;margin:0 0 20px;padding:0}
+  .plan li{padding:10px 0;border-top:1px solid var(--line);color:var(--secondary);font-size:14px}
+  .plan .rub{font-family:var(--mono);font-size:12px;color:var(--muted);margin:0 0 16px}
+
+  .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+  .step .n{font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .step p{margin:8px 0 0;font-size:14px;line-height:1.55;color:var(--secondary)}
+  .step code{font-family:var(--mono);font-size:12px;background:var(--raised);border:1px solid var(--line);border-radius:4px;padding:2px 6px}
+
+  details{border-top:1px solid var(--line);padding:16px 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;font-weight:500;font-size:15px;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;font-family:var(--mono);color:var(--muted)}
+  details[open] summary::after{content:"−"}
+  details p{margin:10px 0 0;color:var(--secondary);font-size:14px;max-width:70ch}
+
+  footer{margin-top:80px;border-top:1px solid var(--line);padding:32px 0}
+  .foot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .foot a{color:var(--muted);text-decoration:none}
+  .foot a:hover{color:var(--text)}
+  .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+  @media (max-width:1024px){
+    .hero{grid-template-columns:1fr;gap:40px;padding:64px 0}
+    .sample{grid-template-columns:1fr;gap:32px}
+    .features{grid-template-columns:1fr 1fr}
+    .features .card:first-child{grid-column:1/-1}
+    .plans{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 20px}
+    h1{font-size:clamp(32px,8vw,40px)}
+    .actions .btn{width:100%}
+    .features{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    section{padding-top:64px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+  }
 </style>
 </head>
 <body>
-<header><div class="wrap hdr"><a class="logo" href="index.html">BJ <b>Labs</b></a><a class="hdr-cta" href="mailto:bay.harbor.144@gmail.com?subject=AI-ассистент%20для%20сайта">Запросить демо</a></div></header>
+<header class="wrap">
+  <div class="nav">
+    <a class="logo" href="index.html">BJ <b>Labs</b></a>
+    <a class="nav-cta" href="mailto:bay.harbor.144@gmail.com?subject=AI-ассистент%20для%20сайта">Запросить демо</a>
+  </div>
+</header>
 <main class="wrap">
   <section class="hero">
-    <span class="badge">Запуск за 1 день · без выдуманных цен</span>
-    <h1>Ассистент, который отвечает по вашему сайту</h1>
-    <p>Отвечает клиентам 24/7 на вопросы об услугах, ценах и сроках — строго по вашим страницам. Не знает ответа — передаёт контакт человеку. Заявки приходят на почту или в Telegram.</p>
-    <a class="btn" href="https://figures-cnet-seasons-seventh.trycloudflare.com/?chat=1" target="_blank" rel="noopener">Открыть живое демо</a>
-    <a class="btn" style="background:#fff;color:var(--accent);border:1px solid var(--accent);margin-left:8px" href="mailto:bay.harbor.144@gmail.com?subject=AI-ассистент%20для%20сайта">Запросить установку</a>
-    <p style="font-size:13px;margin-top:10px">Демо отвечает по страницам BJ Labs. Если ссылка недоступна — напишите, пришлю запись.</p>
+    <div>
+      <div class="eyebrow">AI-ассистент · старт за 1 день</div>
+      <h1>Отвечает по страницам сайта. Не знает — передаёт человеку</h1>
+      <p class="lead">Ассистент для сайта: цитирует ваши страницы, отвечает про услуги, цены и сроки и собирает заявки. Без выдуманных цен — в ответе видно источник.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://figures-cnet-seasons-seventh.trycloudflare.com/?chat=1" target="_blank" rel="noopener">Открыть живое демо</a>
+        <a class="btn btn-secondary" href="mailto:bay.harbor.144@gmail.com?subject=AI-ассистент%20для%20сайта">Запросить установку</a>
+      </div>
+      <p class="note">Демо работает на страницах BJ Labs. Если ссылка недоступна — напишите, пришлю запись.</p>
+    </div>
+    <figure class="preview" style="margin:0">
+      <div class="pv-head">
+        <span class="pv-title">Демо · BJ Labs</span>
+        <span class="pv-tag">ответ по странице</span>
+      </div>
+      <div class="pv-q">Сколько стоит аудит?</div>
+      <p class="pv-a">Аудит — 25 проверок и отчёт со скором 0–100. Фикс: €60 за три критичных правки (1–2 дня) или €90 за полный пакет (2–3 дня).</p>
+      <div class="pv-src">источник · proposal.html, «Стоимость и сроки»</div>
+      <div class="pv-input">
+        <span>Спросите про цены и сроки</span>
+        <span class="pv-send" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </div>
+      <figcaption>Пример ответа демо-ассистента</figcaption>
+    </figure>
   </section>
 
-  <div class="grid">
-    <div class="card"><h3>Без галлюцинаций</h3><p>Каждый ответ опирается на фрагмент вашей страницы. Нет ответа — ассистент не придумывает, а зовёт человека.</p></div>
-    <div class="card"><h3>Один скрипт на сайте</h3><p>Виджет ставится одной строкой. Работает на любом сайте: Tilda, WordPress, самописный.</p></div>
-    <div class="card"><h3>Видно вопросы</h3><p>Вы получаете список того, что спрашивают чаще всего, — готовые темы для FAQ и контента.</p></div>
-  </div>
-
-  <h2>Пример диалога</h2>
-  <div class="dialog">
-    <div class="bubble u">Сколько стоит аудит?</div>
-    <div class="bubble a">Аудит — 25 проверок и отчёт со скором 0–100. Фикс: €60 за 3 критичных правки (1–2 дня) или €90 за полный пакет (2–3 дня). Точнее — напишите на bay.harbor.144@gmail.com.</div>
-    <div class="bubble u">А если у меня нет доступа к сайту?</div>
-    <div class="bubble a">Можно работать без доступа: присылаю готовые файлы и инструкцию, вы вставляете сами. Входит в пакет.</div>
-    <div class="note">Фрагмент реального диалога с демо-ассистентом BJ Labs.</div>
-  </div>
-
-  <h2>Сколько стоит</h2>
-  <div class="price">
-    <div class="card">
-      <div class="num">€190 <small>разово</small></div>
-      <p>Старт: 20–50 страниц, виджет, контакты, 1 язык, запуск 1 день.</p>
-      <ul class="ticks"><li>Ответы по страницам сайта</li><li>Передача контакта человеку</li><li>Статистика вопросов</li></ul>
-      <p style="margin-top:12px"><b>€30/мес</b> — хостинг, наблюдение, 1 обновление контента.</p>
-      <p style="margin-top:8px;font-size:13px">Для РФ: <b>18 000 ₽</b> + <b>2 900 ₽/мес</b>, оплата в рублях.</p>
+  <section>
+    <h2>Что он делает</h2>
+    <p class="section-note">Отвечает по тексту страниц, показывает источник и не подменяет человека там, где нужен человек.</p>
+    <div class="features">
+      <article class="card">
+        <h3>Ссылается на страницу</h3>
+        <p>В ответе видно, откуда взята цена или срок: файл и раздел. Если источника нет, ассистент не утверждает.</p>
+        <div class="mini-src">источник · proposal.html, «Стоимость и сроки»</div>
+      </article>
+      <article class="card">
+        <h3>Один script на сайте</h3>
+        <p>Tilda, WordPress, самописный — без правок бэкенда. Виджет подключается одним тегом.</p>
+      </article>
+      <article class="card">
+        <h3>Журнал вопросов</h3>
+        <p>Видно, что спрашивают чаще и где диалог ушёл человеку. Темы для FAQ берутся оттуда.</p>
+      </article>
     </div>
-    <div class="card">
-      <div class="num">€490 <small>+ €85/мес</small></div>
-      <p>Бизнес: Telegram/WhatsApp-бот с заявками в CRM, каталогом или записью.</p>
-      <ul class="ticks"><li>Интеграция с CRM</li><li>Запись/каталог/оплата</li><li>Передача диалога менеджеру</li></ul>
-      <p style="margin-top:12px;font-size:13px">Для РФ: <b>45 000 ₽</b> + <b>7 900 ₽/мес</b>.</p>
+  </section>
+
+  <section>
+    <div class="sample">
+      <div>
+        <h2>Когда не знает</h2>
+        <p class="section-note" style="margin-bottom:0">Ассистент не додумывает ответ. Он говорит, что уточнит у человека, даёт контакт и записывает вопрос в журнал.</p>
+      </div>
+      <div class="handoff">
+        <p class="q"><b>Вопрос клиента</b>Можно оплатить картой при получении?</p>
+        <p class="a">В материалах сайта об этом нет. Уточню у человека — напишите на bay.harbor.144@gmail.com, отвечу лично.</p>
+        <div class="log">передано человеку · вопрос <b>в журнале</b></div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <h2>Как это работает</h2>
-  <ol class="steps">
-    <li>Присылаете ссылку на сайт и страницы (или sitemap).</li>
-    <li>Индексирую текст, настраиваю тон, контакты и правила — 2–4 часа.</li>
-    <li>Вставляете <code>&lt;script src="…/widget.js"&gt;</code> на сайт.</li>
-    <li>Проверяем 20 вопросами, передаю доступ и статистику.</li>
-  </ol>
+  <section>
+    <h2>Стоимость</h2>
+    <p class="section-note">Запуск и месяц поддержки. Цены в евро; для РФ — в рублях.</p>
+    <div class="plans">
+      <article class="plan">
+        <div class="plan-label">Старт</div>
+        <div class="price"><span class="num">€190</span><span class="per">разово</span></div>
+        <p class="plan-sub">20–50 страниц, виджет, один язык. Запуск за день.</p>
+        <ul>
+          <li>Ответы по страницам сайта</li>
+          <li>Передача контакта человеку</li>
+          <li>Статистика вопросов</li>
+          <li>€30 в месяц: хостинг, наблюдение, одно обновление</li>
+        </ul>
+        <p class="rub">РФ · 18 000 ₽ + 2 900 ₽/мес</p>
+        <a class="btn btn-primary" href="mailto:bay.harbor.144@gmail.com?subject=AI-ассистент%20Старт">Запросить установку</a>
+      </article>
+      <article class="plan">
+        <div class="plan-label">Бизнес</div>
+        <div class="price"><span class="num">€490</span><span class="per">+ €85/мес</span></div>
+        <p class="plan-sub">Telegram или WhatsApp, CRM, запись или каталог.</p>
+        <ul>
+          <li>Интеграция с CRM</li>
+          <li>Запись, каталог или оплата</li>
+          <li>Передача диалога менеджеру</li>
+          <li>3–5 дней на запуск</li>
+        </ul>
+        <p class="rub">РФ · 45 000 ₽ + 7 900 ₽/мес</p>
+        <a class="btn btn-secondary" href="mailto:bay.harbor.144@gmail.com?subject=AI-ассистент%20Бизнес">Обсудить</a>
+      </article>
+    </div>
+  </section>
 
-  <h2>Вопросы</h2>
-  <details><summary>На каких языках отвечает?</summary><p>Русский, английский, румынский — по языку вопроса. Можно ограничить одним языком.</p></details>
-  <details><summary>Что если ассистент не знает ответ?</summary><p>Он не придумывает: пишет, что уточнит у человека, и даёт ваш контакт. Вопрос попадает в статистику.</p></details>
-  <details><summary>Где хостится?</summary><p>На сервере, который я обслуживаю; данные — только ваши страницы и журнал вопросов. Для ЕС/США могу развернуть у вашего хостера.</p></details>
-  <details><summary>Как оплатить из РФ?</summary><p>В рублях: Unistream на имя получателя в Тирасполе или перевод на карту РФ — по согласованию. Для ЕС/США — PayPal по инвойсу, Payoneer, Western Union или банковский перевод.</p></details>
-  <details><summary>Сроки</summary><p>Старт — 1 день после получения страниц. Бизнес-вариант с CRM — 3–5 дней.</p></details>
+  <section>
+    <h2>Как запускаем</h2>
+    <p class="section-note">Без звонков и встреч — всё в переписке.</p>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Присылаете ссылку на сайт и страницы (или sitemap).</p></div>
+      <div class="step"><div class="n">02</div><p>Индексирую текст, настраиваю тон, контакты и правила — 2–4 часа.</p></div>
+      <div class="step"><div class="n">03</div><p>Вставляете <code>&lt;script&gt;</code> на сайт.</p></div>
+      <div class="step"><div class="n">04</div><p>Проверяем 20 вопросами, передаю доступ и статистику.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Вопросы</h2>
+    <details><summary>На каких языках отвечает</summary><p>Русский, английский, румынский — по языку вопроса. Можно ограничить одним языком.</p></details>
+    <details><summary>Что если ассистент не знает ответ</summary><p>Он не придумывает: пишет, что уточнит у человека, даёт контакт. Вопрос попадает в журнал.</p></details>
+    <details><summary>Где хостится</summary><p>На сервере, который я обслуживаю; данные — ваши страницы и журнал вопросов. Для ЕС и США могу развернуть у вашего хостера.</p></details>
+    <details><summary>Оплата из РФ</summary><p>В рублях: Unistream на имя получателя в Тирасполе или перевод по согласованию. Для ЕС и США — PayPal по инвойсу, Payoneer, Western Union или банковский перевод; вывод PayPal требует банк Молдовы.</p></details>
+    <details><summary>Сроки</summary><p>Старт — 1 день после получения страниц. Бизнес-вариант с CRM — 3–5 дней.</p></details>
+  </section>
 </main>
-<footer><div class="wrap">BJ Labs · <a href="mailto:bay.harbor.144@gmail.com">bay.harbor.144@gmail.com</a> · <a href="index.html">услуги</a> · <a href="chatbot-en.html">English</a></div></footer>
+<footer>
+  <div class="wrap foot">
+    <span>BJ Labs · Молдова и ПМР · удалённо РФ, ЕС, США</span>
+    <span><a href="mailto:bay.harbor.144@gmail.com">bay.harbor.144@gmail.com</a> · <a href="index.html">услуги</a> · <a href="chatbot-en.html">English</a></span>
+  </div>
+</footer>
 </body>
 </html>

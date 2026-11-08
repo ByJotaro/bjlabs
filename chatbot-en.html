@@ -3,106 +3,255 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI assistant for your website — answers from your own pages | BJ Labs</title>
-<meta name="description" content="A website assistant that answers customer questions 24/7 using your own pages: services, prices, timelines. No invented prices; hand-off to a human. Live in one day.">
+<title>Website AI assistant — answers from your pages | BJ Labs</title>
+<meta name="description" content="An assistant that answers from your site pages, cites the source, and hands the conversation to a human when it doesn't know. Live in a day, one script on the site.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F766E'/><text x='50' y='68' font-size='46' font-family='sans-serif' fill='white' text-anchor='middle'>BJ</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#fff;--surface:#F5F7FA;--hair:#E6EAF0;--ink:#0F172A;--muted:#475569;--accent:#0F766E;--accent-h:#0B5F59}
+  :root{
+    --bg:#161513; --deep:#12110f; --card:#1c1a18; --raised:#262421;
+    --text:#efe9de; --secondary:#aaa398; --muted:#8a847a;
+    --line:rgba(239,233,222,.08); --line-strong:rgba(239,233,222,.14);
+    --accent:#5eead4;
+    --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}
-  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
-  header{border-bottom:1px solid var(--hair);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);z-index:10}
-  .hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
-  .logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--ink)}
-  .logo b{color:var(--accent)}
-  .hdr-cta{background:var(--accent);color:#fff;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:600;font-size:14px}
-  .hero{padding:60px 0 34px}
-  .badge{display:inline-block;background:#ECFDF5;color:var(--accent);border:1px solid #CCFBF1;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;margin-bottom:16px}
-  h1{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em}
-  .hero p{font-size:19px;color:var(--muted);max-width:62ch;margin:0 0 24px}
-  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:13px 22px;border-radius:10px;font-weight:600}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:30px 0}
-  .card{background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:20px}
-  .card h3{margin:0 0 8px;font-size:16px}
-  .card p{margin:0;color:var(--muted);font-size:14px}
-  h2{font-size:clamp(22px,3vw,30px);margin:44px 0 12px;letter-spacing:-.01em}
-  .price{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:18px 0}
-  .price .card{background:#fff}
-  .num{font-size:30px;font-weight:800;letter-spacing:-.02em}
-  .num small{font-size:13px;font-weight:500;color:var(--muted)}
-  ul.ticks{list-style:none;padding:0;margin:10px 0 0}
-  ul.ticks li{padding-left:24px;position:relative;margin:6px 0;font-size:14px;color:var(--muted)}
-  ul.ticks li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
-  .steps{counter-reset:s;padding:0;list-style:none}
-  .steps li{counter-increment:s;margin:12px 0;padding-left:40px;position:relative}
-  .steps li:before{content:counter(s);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center}
-  .dialog{background:#F8FAFC;border:1px solid var(--hair);border-radius:14px;padding:18px;max-width:640px}
-  .bubble{max-width:85%;padding:9px 12px;border-radius:12px;margin:8px 0;font-size:14px}
-  .u{margin-left:auto;background:var(--accent);color:#fff;border-bottom-right-radius:4px}
-  .a{background:#fff;border:1px solid var(--hair);border-bottom-left-radius:4px}
-  .note{font-size:12px;color:var(--muted);margin-top:8px}
-  details{border-bottom:1px solid var(--hair);padding:12px 0}
-  summary{cursor:pointer;font-weight:600}
-  details p{color:var(--muted);margin:8px 0 0}
-  footer{border-top:1px solid var(--hair);padding:24px 0;color:var(--muted);font-size:13px;margin-top:40px}
+  html{overflow-x:hidden}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+  a{color:inherit}
+  ::selection{background:rgba(94,234,212,.22)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line)}
+  .logo{font-size:18px;font-weight:500;text-decoration:none;letter-spacing:0}
+  .logo b{color:var(--accent);font-weight:500}
+  .nav-cta{display:inline-flex;align-items:center;height:36px;padding:0 16px;border-radius:8px;border:1px solid var(--line-strong);background:var(--raised);color:var(--text);text-decoration:none;font-size:14px;font-weight:500;transition:background-color .14s var(--ease),border-color .14s var(--ease)}
+  .nav-cta:hover{background:#2e2b27;border-color:rgba(239,233,222,.2)}
+
+  .hero{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:64px;align-items:center;padding:96px 0 96px}
+  .eyebrow{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:0}
+  h1{font-size:clamp(36px,3.6vw,50px);line-height:1.04;letter-spacing:-.03em;font-weight:500;margin:16px 0 20px;text-wrap:balance}
+  .lead{font-size:18px;line-height:1.55;color:var(--secondary);max-width:34rem;margin:0 0 28px}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 20px;border-radius:10px;font-size:15px;font-weight:500;text-decoration:none;transition:background-color .14s var(--ease),color .14s var(--ease),transform .14s var(--ease)}
+  .btn:active{transform:scale(.98)}
+  .btn-primary{background:var(--text);color:var(--bg)}
+  .btn-primary:hover{background:#fff8ec}
+  .btn-secondary{background:var(--raised);color:var(--text);border:1px solid var(--line-strong)}
+  .btn-secondary:hover{background:#2e2b27;border-color:rgba(239,233,222,.2)}
+  .note{font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--muted);margin:16px 0 0;max-width:34rem}
+
+  .preview{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 24px 64px rgba(0,0,0,.32);min-width:0}
+  .preview figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:16px}
+  .pv-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .pv-title{font-family:var(--mono);font-size:12px;color:var(--secondary);font-weight:400}
+  .pv-tag{font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .pv-q{justify-self:end;max-width:82%;margin:20px 0 0 auto;background:var(--raised);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;color:var(--secondary)}
+  .pv-a{margin:16px 0 0;font-size:15px;line-height:1.55;max-width:52ch}
+  .pv-src{margin-top:14px;padding-left:10px;border-left:2px solid var(--accent);font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--accent)}
+  .pv-input{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;height:44px;padding:0 12px 0 14px;border:1px solid var(--line-strong);border-radius:10px;color:var(--muted);font-size:14px}
+  .pv-send{display:grid;place-items:center;width:28px;height:28px;border:0;border-radius:6px;background:var(--raised);color:var(--accent)}
+
+  section{padding:80px 0 0}
+  h2{font-size:clamp(24px,2.6vw,32px);line-height:1.15;letter-spacing:-.01em;font-weight:500;margin:0 0 12px}
+  .section-note{color:var(--secondary);max-width:60ch;margin:0 0 32px;font-size:15px}
+
+  .features{display:grid;grid-template-columns:1.3fr .85fr .85fr;gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;min-width:0}
+  .card h3{font-size:16px;font-weight:500;margin:0 0 8px}
+  .card p{margin:0;color:var(--secondary);font-size:14px;line-height:1.55}
+  .mini-src{margin-top:16px;padding-left:10px;border-left:2px solid var(--accent);font-family:var(--mono);font-size:11px;line-height:1.6;color:var(--accent)}
+
+  .sample{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+  .handoff{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+  .handoff .q{margin:0 0 16px;color:var(--secondary);font-size:14px}
+  .handoff .q b{display:block;font-family:var(--mono);font-size:11px;font-weight:400;color:var(--muted);margin-bottom:6px}
+  .handoff .a{margin:0;font-size:15px;line-height:1.55}
+  .handoff .log{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .handoff .log b{color:var(--accent);font-weight:400}
+
+  .plans{display:grid;grid-template-columns:1.25fr .9fr;gap:16px;align-items:start}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;min-width:0}
+  .plan-label{font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .price{display:flex;align-items:baseline;gap:8px;margin:12px 0 4px;font-variant-numeric:tabular-nums}
+  .price .num{font-size:32px;font-weight:500;letter-spacing:-.01em;line-height:1}
+  .price .per{font-size:13px;color:var(--muted)}
+  .plan-sub{color:var(--secondary);font-size:14px;margin:0 0 16px}
+  .plan ul{list-style:none;margin:0 0 20px;padding:0}
+  .plan li{padding:10px 0;border-top:1px solid var(--line);color:var(--secondary);font-size:14px}
+  .plan .rub{font-family:var(--mono);font-size:12px;color:var(--muted);margin:0 0 16px}
+
+  .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+  .step .n{font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .step p{margin:8px 0 0;font-size:14px;line-height:1.55;color:var(--secondary)}
+  .step code{font-family:var(--mono);font-size:12px;background:var(--raised);border:1px solid var(--line);border-radius:4px;padding:2px 6px}
+
+  details{border-top:1px solid var(--line);padding:16px 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;font-weight:500;font-size:15px;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;font-family:var(--mono);color:var(--muted)}
+  details[open] summary::after{content:"−"}
+  details p{margin:10px 0 0;color:var(--secondary);font-size:14px;max-width:70ch}
+
+  footer{margin-top:80px;border-top:1px solid var(--line);padding:32px 0}
+  .foot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .foot a{color:var(--muted);text-decoration:none}
+  .foot a:hover{color:var(--text)}
+
+  @media (max-width:1024px){
+    .hero{grid-template-columns:1fr;gap:40px;padding:64px 0}
+    .sample{grid-template-columns:1fr;gap:32px}
+    .features{grid-template-columns:1fr 1fr}
+    .features .card:first-child{grid-column:1/-1}
+    .plans{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 20px}
+    h1{font-size:clamp(32px,8vw,40px)}
+    .actions .btn{width:100%}
+    .features{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    section{padding-top:64px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+  }
 </style>
 </head>
 <body>
-<header><div class="wrap hdr"><a class="logo" href="index.html">BJ <b>Labs</b></a><a class="hdr-cta" href="mailto:bay.harbor.144@gmail.com?subject=AI%20assistant%20demo">Request a demo</a></div></header>
+<header class="wrap">
+  <div class="nav">
+    <a class="logo" href="index.html">BJ <b>Labs</b></a>
+    <a class="nav-cta" href="mailto:bay.harbor.144@gmail.com?subject=Website%20AI%20assistant">Request a demo</a>
+  </div>
+</header>
 <main class="wrap">
   <section class="hero">
-    <span class="badge">Live in one day · no invented prices</span>
-    <h1>An assistant that answers from your website</h1>
-    <p>Answers customer questions 24/7 about services, prices and timelines — strictly from your own pages. When it doesn't know, it hands the conversation to a human. Leads arrive by email or Telegram.</p>
-    <a class="btn" href="https://figures-cnet-seasons-seventh.trycloudflare.com/?chat=1" target="_blank" rel="noopener">Open live demo</a>
-    <a class="btn" style="background:#fff;color:var(--accent);border:1px solid var(--accent);margin-left:8px" href="mailto:bay.harbor.144@gmail.com?subject=AI%20assistant%20demo">Request setup</a>
-    <p style="font-size:13px;margin-top:10px">The demo answers from BJ Labs pages. If the link is down, email me and I'll send a recording.</p>
+    <div>
+      <div class="eyebrow">Website assistant · start in a day</div>
+      <h1>Answers from your pages. Hands over when it doesn't know</h1>
+      <p class="lead">A site assistant that quotes your pages, answers about services, prices and timelines, and collects leads. No invented prices — every answer shows its source.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://figures-cnet-seasons-seventh.trycloudflare.com/?chat=1" target="_blank" rel="noopener">Open live demo</a>
+        <a class="btn btn-secondary" href="mailto:bay.harbor.144@gmail.com?subject=Website%20AI%20assistant">Request setup</a>
+      </div>
+      <p class="note">The demo runs on BJ Labs' own pages. If the link is down, write to me and I'll send a recording.</p>
+    </div>
+    <figure class="preview" style="margin:0">
+      <div class="pv-head">
+        <span class="pv-title">Demo · BJ Labs</span>
+        <span class="pv-tag">answer from a page</span>
+      </div>
+      <div class="pv-q">How much is the audit?</div>
+      <p class="pv-a">The audit is 25 checks plus a report with a 0–100 score. The fix pack is €60 for three critical fixes (1–2 days) or €90 for the full pack (2–3 days).</p>
+      <div class="pv-src">source · proposal.html, "Pricing and timelines"</div>
+      <div class="pv-input">
+        <span>Ask about prices and timelines</span>
+        <span class="pv-send" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </div>
+      <figcaption>A sample answer from the demo assistant</figcaption>
+    </figure>
   </section>
 
-  <div class="grid">
-    <div class="card"><h3>Grounded answers</h3><p>Every reply cites a fragment of your page. No answer — no guessing: it offers a human contact.</p></div>
-    <div class="card"><h3>One script tag</h3><p>Works on any site: WordPress, Webflow, Tilda, custom. No backend changes.</p></div>
-    <div class="card"><h3>See the questions</h3><p>You get the list of what customers ask most — ready-made FAQ and content ideas.</p></div>
-  </div>
-
-  <h2>Sample dialog</h2>
-  <div class="dialog">
-    <div class="bubble u">How much is the audit?</div>
-    <div class="bubble a">25 checks with a 0–100 score. Fix: €60 for the 3 critical issues (1–2 days) or €90 for the full pack (2–3 days). For details: bay.harbor.144@gmail.com.</div>
-    <div class="bubble u">Can you work without access to my site?</div>
-    <div class="bubble a">Yes — I send ready-to-paste files and instructions, you apply them. Included in the pack.</div>
-    <div class="note">Excerpt from a real session with the BJ Labs demo assistant.</div>
-  </div>
-
-  <h2>Pricing</h2>
-  <div class="price">
-    <div class="card">
-      <div class="num">$220 <small>one-time</small></div>
-      <p>Start: 20–50 pages, widget, contacts, one language, live in one day.</p>
-      <ul class="ticks"><li>Answers from your pages</li><li>Human hand-off</li><li>Question analytics</li></ul>
-      <p style="margin-top:12px"><b>$35/mo</b> — hosting, monitoring, one content update.</p>
+  <section>
+    <h2>What it does</h2>
+    <p class="section-note">Answers from the text of your pages, shows the source, and does not stand in for a human where a human is needed.</p>
+    <div class="features">
+      <article class="card">
+        <h3>Points to the page</h3>
+        <p>Every price or timeline shows where it came from: file and section. If there is no source, the assistant does not assert it.</p>
+        <div class="mini-src">source · proposal.html, "Pricing and timelines"</div>
+      </article>
+      <article class="card">
+        <h3>One script on the site</h3>
+        <p>Tilda, WordPress, custom — no backend changes. The widget is one line of HTML.</p>
+      </article>
+      <article class="card">
+        <h3>Question log</h3>
+        <p>See what people ask most and where a conversation went to a human. FAQ topics come from there.</p>
+      </article>
     </div>
-    <div class="card">
-      <div class="num">$550 <small>+ $95/mo</small></div>
-      <p>Business: Telegram/WhatsApp bot with CRM leads, catalog or booking.</p>
-      <ul class="ticks"><li>CRM integration</li><li>Booking / catalog / payments</li><li>Hand-off to a manager</li></ul>
+  </section>
+
+  <section>
+    <div class="sample">
+      <div>
+        <h2>When it doesn't know</h2>
+        <p class="section-note" style="margin-bottom:0">The assistant does not guess. It says it will check with a human, gives the contact, and logs the question.</p>
+      </div>
+      <div class="handoff">
+        <p class="q"><b>Customer question</b>Can I pay by card on delivery?</p>
+        <p class="a">The site materials don't cover that. I'll check with a human — write to bay.harbor.144@gmail.com and I'll reply personally.</p>
+        <div class="log">handed to a human · question <b>logged</b></div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <h2>How it works</h2>
-  <ol class="steps">
-    <li>Send your site URL and pages (or sitemap).</li>
-    <li>I index the text, tune tone, contacts and rules — 2–4 hours.</li>
-    <li>You paste one <code>&lt;script&gt;</code> tag into the site.</li>
-    <li>We test 20 questions; you get access and analytics.</li>
-  </ol>
+  <section>
+    <h2>Pricing</h2>
+    <p class="section-note">Setup plus a monthly support fee. Prices in USD; EUR on request.</p>
+    <div class="plans">
+      <article class="plan">
+        <div class="plan-label">Start</div>
+        <div class="price"><span class="num">$220</span><span class="per">one-time</span></div>
+        <p class="plan-sub">20–50 pages, widget, one language. Live in a day.</p>
+        <ul>
+          <li>Answers from site pages</li>
+          <li>Hand-off to a human</li>
+          <li>Question statistics</li>
+          <li>$35/month: hosting, monitoring, one update</li>
+        </ul>
+        <a class="btn btn-primary" href="mailto:bay.harbor.144@gmail.com?subject=Website%20AI%20assistant%20Start">Request setup</a>
+      </article>
+      <article class="plan">
+        <div class="plan-label">Business</div>
+        <div class="price"><span class="num">$550</span><span class="per">+ $95/mo</span></div>
+        <p class="plan-sub">Telegram or WhatsApp, CRM, booking or catalog.</p>
+        <ul>
+          <li>CRM integration</li>
+          <li>Booking, catalog or payment</li>
+          <li>Hand-off to a manager</li>
+          <li>3–5 days to launch</li>
+        </ul>
+        <a class="btn btn-secondary" href="mailto:bay.harbor.144@gmail.com?subject=Website%20AI%20assistant%20Business">Discuss</a>
+      </article>
+    </div>
+  </section>
 
-  <h2>FAQ</h2>
-  <details><summary>Which languages?</summary><p>English, Russian, Romanian — matching the question. Can be locked to one language.</p></details>
-  <details><summary>What if it doesn't know?</summary><p>It says it will check with a human and gives your contact; the question is logged.</p></details>
-  <details><summary>Where is it hosted?</summary><p>On a server I maintain; data is your pages plus the question log. For EU/US clients I can deploy on your host.</p></details>
-  <details><summary>Payments</summary><p>PayPal invoice (withdrawal requires a Moldovan bank account), Payoneer, bank transfer (EU), or Western Union. For a first payment, Western Union or Payoneer is the fastest route. USD/EUR.</p></details>
+  <section>
+    <h2>How it launches</h2>
+    <p class="section-note">No calls or meetings — everything in writing.</p>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>You send the site URL and pages (or a sitemap).</p></div>
+      <div class="step"><div class="n">02</div><p>I index the text, set the tone, contacts and rules — 2–4 hours.</p></div>
+      <div class="step"><div class="n">03</div><p>You paste one <code>&lt;script&gt;</code> into the site.</p></div>
+      <div class="step"><div class="n">04</div><p>We test 20 questions, then I hand over access and stats.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <details><summary>Which languages does it answer in</summary><p>English, Russian, Romanian — matching the question. You can restrict it to one language.</p></details>
+    <details><summary>What if it doesn't know the answer</summary><p>It does not make one up: it says it will check with a human and gives the contact. The question goes into the log.</p></details>
+    <details><summary>Where is it hosted</summary><p>On a server I maintain; the data is your pages and the question log. For the EU or US I can deploy it with your host.</p></details>
+    <details><summary>Payment from the US or EU</summary><p>PayPal invoice, Payoneer, Western Union or a bank transfer. PayPal withdrawal requires a Moldovan bank account.</p></details>
+    <details><summary>Timelines</summary><p>Start is one day after I receive the pages. The Business option with CRM takes 3–5 days.</p></details>
+  </section>
 </main>
-<footer><div class="wrap">BJ Labs · <a href="mailto:bay.harbor.144@gmail.com">bay.harbor.144@gmail.com</a> · <a href="index.html">services</a> · <a href="chatbot.html">Русский</a></div></footer>
+<footer>
+  <div class="wrap foot">
+    <span>BJ Labs · Moldova and PMR · remote US, EU, Russia</span>
+    <span><a href="mailto:bay.harbor.144@gmail.com">bay.harbor.144@gmail.com</a> · <a href="index.html">services</a> · <a href="chatbot.html">Русский</a></span>
+  </div>
+</footer>
 </body>
 </html>
