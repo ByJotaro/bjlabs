@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ответы на отзывы за 48 часов — BJ Labs</title>
+<meta name="description" content="10 ответов на отзывы в вашем тоне за 48 часов. Без доступа к аккаунту: публикуете вы. Первый ответ бесплатно. Для клиник, салонов и сервисов.">
+<link rel="canonical" href="https://byjotaro.github.io/bjlabs/review-reply.html">
+<meta property="og:title" content="Ответы на отзывы за 48 часов — BJ Labs">
+<meta property="og:description" content="10 ответов в вашем тоне. Без доступа к аккаунту. Первый ответ бесплатно.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://byjotaro.github.io/bjlabs/review-reply.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F766E'/><text x='50' y='68' font-size='46' font-family='sans-serif' fill='white' text-anchor='middle'>BJ</text></svg>">
+<style>
+  :root{
+    --paper:#F6F3EC; --sheet:#FFFDF8; --ink:#151A17; --muted:#5F665F;
+    --line:#D8D2C5; --accent:#A33B2B; --accent-dark:#7E2C20;
+    --green:#1F4E46; --mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font:16px/1.6 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  a{color:var(--green)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  header{position:sticky;top:0;z-index:20;background:rgba(246,243,236,.95);
+    border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:18px}
+  .logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--ink)}
+  .logo b{color:var(--accent)}
+  nav{display:flex;gap:18px;flex-wrap:wrap}
+  nav a{font-size:14px;color:var(--muted);text-decoration:none}
+  nav a:hover,nav a[aria-current="page"]{color:var(--ink)}
+  nav a[aria-current="page"]{border-bottom:2px solid var(--accent);padding-bottom:2px}
+  .hero{padding:64px 0 44px;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:start}
+  .kicker{font-size:14px;color:var(--accent);font-weight:650;margin:0 0 14px}
+  h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,5vw,58px);
+    line-height:1.06;letter-spacing:-.025em;font-weight:500;margin:0 0 20px;max-width:18ch}
+  .lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:54ch;margin:0 0 26px}
+  .actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;
+    padding:12px 20px;border:1px solid transparent;border-radius:4px;
+    text-decoration:none;font-weight:650;font-size:15px;transition:background .15s,color .15s}
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{background:var(--accent)}
+  .btn-secondary{border-color:var(--line);color:var(--ink);background:transparent}
+  .btn-secondary:hover{border-color:var(--ink)}
+  .btn:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .fine{font-size:13px;color:var(--muted);margin:14px 0 0}
+  .review-sheet{background:var(--sheet);border:1px solid var(--line);
+    border-top:4px solid var(--accent);padding:22px 22px 20px;
+    box-shadow:10px 10px 0 rgba(21,26,23,.06)}
+  .sheet-top{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:16px}
+  .stars{color:var(--accent);letter-spacing:2px;font-size:17px}
+  .sheet-top span:last-child{font:12px/1 var(--mono);color:var(--muted)}
+  blockquote{font-family:Georgia,"Times New Roman",serif;font-size:19px;line-height:1.45;
+    margin:0 0 18px;color:var(--ink)}
+  .reply-label{font:11px/1 var(--mono);color:var(--green);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  .reply{border-left:2px solid var(--green);padding-left:14px;font-size:15px;color:#2B332D;margin:0 0 18px}
+  .margin-note{font:12px/1.5 var(--mono);color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+  .demo-label{font-size:12px;color:var(--muted);margin:12px 0 0}
+  section{padding:52px 0;border-top:1px solid var(--line)}
+  h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(26px,3.4vw,36px);
+    line-height:1.15;letter-spacing:-.015em;font-weight:500;margin:0 0 12px}
+  .section-lead{color:var(--muted);max-width:64ch;margin:0 0 28px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{border-top:2px solid var(--ink);padding-top:14px}
+  .step b{display:block;font-size:15px;margin-bottom:6px}
+  .step p{margin:0;color:var(--muted);font-size:14px}
+  .samples{display:grid;gap:0;border-top:1px solid var(--line)}
+  .sample{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;
+    padding:24px 0;border-bottom:1px solid var(--line)}
+  .sample .review{font-family:Georgia,"Times New Roman",serif;font-size:17px;line-height:1.45;margin:0}
+  .sample .review small{display:block;font:12px/1.4 var(--mono);color:var(--muted);margin-bottom:8px}
+  .sample .answer{margin:0;font-size:15px;color:#2B332D;border-left:2px solid var(--green);padding-left:16px}
+  .sample .answer small{display:block;font:11px/1.4 var(--mono);color:var(--green);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em}
+  .offer{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start}
+  .offer ul{margin:0;padding-left:20px;color:var(--muted)}
+  .offer li{margin:8px 0}
+  .price-box{background:var(--sheet);border:1px solid var(--line);padding:24px}
+  .price-box .amount{font-family:Georgia,"Times New Roman",serif;font-size:46px;line-height:1;margin:0 0 4px}
+  .price-box .amount small{font:14px/1.4 -apple-system,"Segoe UI",sans-serif;color:var(--muted)}
+  .price-box p{margin:8px 0;color:var(--muted);font-size:14px}
+  .price-box .btn{width:100%;margin-top:14px}
+  .price-note{font-size:12px;color:var(--muted);margin-top:12px}
+  details{border-top:1px solid var(--line);padding:14px 0}
+  summary{cursor:pointer;font-weight:650;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;color:var(--muted);font-weight:400}
+  details[open] summary::after{content:"−"}
+  details p{margin:10px 0 0;color:var(--muted);max-width:70ch}
+  footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:13px}
+  @media (max-width:820px){
+    .hero,.offer{grid-template-columns:1fr;gap:30px}
+    .hero{padding-top:40px}
+    .steps{grid-template-columns:1fr;gap:18px}
+    .sample{grid-template-columns:1fr;gap:12px}
+    nav{gap:12px;font-size:13px}
+    header .wrap{align-items:flex-start;padding-top:12px;padding-bottom:12px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Ответы на отзывы","serviceType":"Review response writing","description":"10 ответов на публичные отзывы в тоне клиента за 48 часов, без доступа к аккаунту.","provider":{"@type":"Organization","name":"BJ Labs","url":"https://byjotaro.github.io/bjlabs/","email":"bay.harbor.144@gmail.com"},"areaServed":["Moldova","PMR","Remote"],"offers":[{"@type":"Offer","name":"Founding 10 replies","price":"39","priceCurrency":"EUR","description":"10 ответов, один круг правок, 48 часов."},{"@type":"Offer","name":"Standard 10 replies","price":"49","priceCurrency":"USD","description":"10 ответов, один круг правок, 48 часов."}]}
+</script>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="index.html">BJ<b>Labs</b></a>
+  <nav aria-label="Основная навигация">
+    <a href="index.html">Аудит сайта</a>
+    <a href="vps-setup.html">VPS</a>
+    <a href="chatbot.html">AI-ассистент</a>
+    <a href="review-reply.html" aria-current="page">Отзывы</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <p class="kicker">Для клиник, салонов и сервисов</p>
+      <h1>Отзывы, на которые не стыдно ответить</h1>
+      <p class="lead">10 ответов в вашем тоне за 48 часов. Без доступа к аккаунту: публикуете вы. Первый ответ — бесплатно.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:bay.harbor.144@gmail.com?subject=Review%20Reply%20Pack%20—%20бесплатный%20пример&body=Ссылка%20на%20карточку%20или%201%20отзыв%3A%0AТон%20бренда%3A%0AКуда%20вернуть%20диалог%20(телефон%2Fпочта)%3A">Получить один ответ бесплатно</a>
+        <a class="btn btn-secondary" href="#price">Цена и состав</a>
+      </div>
+      <p class="fine">Демо ниже — вымышленная клиника DentaLux. Не публикую ответы за вас и не удаляю отзывы.</p>
+    </div>
+
+    <aside class="review-sheet" aria-label="Пример ответа на отзыв">
+      <div class="sheet-top"><span class="stars" aria-label="2 из 5">★★☆☆☆</span><span>2 / 5</span></div>
+      <blockquote>«Пришёл на чистку, ждал 40 минут. Врач хороший, но администратор даже не извинился. В следующий раз подумаю».</blockquote>
+      <div class="reply-label">Ответ, который можно опубликовать</div>
+      <p class="reply">Спасибо, что написали. 40 минут ожидания — наша ошибка, и извиниться должны были сразу. Передали администратору: при задержке больше 10 минут предупреждаем и предлагаем перенести время без потери записи. Если хотите, напишите на hello@dentalux.test — разберёмся и подберём удобный слот.</p>
+      <div class="margin-note">факт → решение → контакт<br>без спора и без «вы всё придумали»</div>
+      <p class="demo-label">Демо, вымышленная клиника. Контакты тестовые.</p>
+    </aside>
+  </div>
+
+  <section>
+    <h2>Ответ — это не спор</h2>
+    <p class="section-lead">Шаблонное «спасибо за отзыв, нам жаль» не возвращает клиента. Хороший ответ признаёт факт, говорит, что изменилось, и даёт короткий путь назад.</p>
+    <div class="steps">
+      <div class="step"><b>Признать факт</b><p>Без «нам жаль, что вам показалось». Если была ошибка — называем её прямо.</p></div>
+      <div class="step"><b>Показать решение</b><p>Что уже изменили или что сделаете в следующий раз. Конкретно, без обещаний чуда.</p></div>
+      <div class="step"><b>Вернуть диалог</b><p>Телефон, почта или ссылка на запись. Один понятный следующий шаг.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Три ответа из демо</h2>
+    <p class="section-lead">Один негативный, один нейтральный, один благодарный. Так выглядит пакет до публикации.</p>
+    <div class="samples">
+      <div class="sample">
+        <p class="review"><small>2★ · ожидание</small>«Ждал 40 минут. Врач хороший, но администратор даже не извинился».</p>
+        <p class="answer"><small>Ответ</small>Спасибо, что написали. 40 минут ожидания — наша ошибка, и извиниться должны были сразу. Передали администратору: при задержке больше 10 минут предупреждаем и предлагаем перенести время без потери записи. Напишите на hello@dentalux.test — подберём удобный слот.</p>
+      </div>
+      <div class="sample">
+        <p class="review"><small>4★ · цена</small>«Всё нормально, но хотелось бы больше информации о цене до приёма».</p>
+        <p class="answer"><small>Ответ</small>Спасибо за отзыв. Согласны: цена должна быть понятна до визита. На сайте есть стоимость консультации и гигиены, а точную сумму называем до начала лечения. Напишите, какой услуги не хватило, — добавим в описание.</p>
+      </div>
+      <div class="sample">
+        <p class="review"><small>5★ · персонал</small>«Очень аккуратно, без боли. Отдельное спасибо Анне на ресепшене».</p>
+        <p class="answer"><small>Ответ</small>Спасибо! Передадим Анне — ей будет приятно. Рады, что приём прошёл спокойно; если появятся вопросы по уходу, напишите нам или позвоните +373 22 000 000.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="price">
+    <div class="offer">
+      <div>
+        <h2>Что входит</h2>
+        <p class="section-lead">Один пакет, без подписки и без доступа к вашему аккаунту.</p>
+        <ul>
+          <li>10 ответов на публичные отзывы в вашем тоне;</li>
+          <li>один круг правок после первого просмотра;</li>
+          <li>разбор тем: что хвалят, на что жалуются;</li>
+          <li>3 шаблона просьбы об отзыве — по желанию;</li>
+          <li>срок 48 часов после ссылки на отзывы;</li>
+          <li>без Yelp, review gating, удаления отзывов и подтверждения «вы были пациентом».</li>
+        </ul>
+      </div>
+      <div class="price-box">
+        <p class="amount">€39 <small>за 10 ответов</small></p>
+        <p>Founding-цена для первых клиентов в Молдове и ПМР. Стандартная — $49 за 10.</p>
+        <p>Первый ответ — бесплатно. Оплата после примера.</p>
+        <a class="btn btn-primary" href="mailto:bay.harbor.144@gmail.com?subject=Review%20Reply%20Pack%20—%20бесплатный%20пример&body=Ссылка%20на%20карточку%20или%201%20отзыв%3A%0AТон%20бренда%3A%0AКуда%20вернуть%20диалог%20(телефон%2Fпочта)%3A">Получить бесплатный пример</a>
+        <p class="price-note">Если меньше 8 из 10 ответов готовы опубликовать — переделаю или верну оплату. Без 3-месячного минимума.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Частые вопросы</h2>
+    <details><summary>Вы публикуете ответы?</summary><p>Нет. Вы получаете текстом или таблицей и публикуете сами. Мне не нужен доступ к аккаунту.</p></details>
+    <details><summary>Это пишет AI?</summary><p>Черновики собираются по вашим публичным ответам и описанию бренда, финальный текст проверяется перед сдачей. AI не публикует и не выдумывает факты; спорные места выношу на согласование.</p></details>
+    <details><summary>Что с негативом и юридическими угрозами?</summary><p>Отвечаю без спора и без обещаний, которые нельзя выполнить. Если в отзыве есть угроза или персональные данные, отмечу это отдельно и предложу безопасный вариант.</p></details>
+    <details><summary>Можно на румынском или английском?</summary><p>Да, для одного языка в пакете. Смешанные языки считаются как отдельные пакеты.</p></details>
+  </section>
+
+  <section>
+    <h2>Пришлите один отзыв</h2>
+    <p class="section-lead">Ответ верну в течение рабочего дня. Если не подойдёт — ничего не должны.</p>
+    <a class="btn btn-primary" href="mailto:bay.harbor.144@gmail.com?subject=Review%20Reply%20Pack%20—%20бесплатный%20пример&body=Ссылка%20на%20карточку%20или%201%20отзыв%3A%0AТон%20бренда%3A%0AКуда%20вернуть%20диалог%20(телефон%2Fпочта)%3A">Написать на email</a>
+    <p class="fine">BJ Labs · удалённо · Молдова и ПМР · оплата после примера</p>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 BJ Labs · <a href="index.html">аудит сайта</a> · <a href="vps-setup.html">настройка VPS</a> · <a href="chatbot.html">AI-ассистент</a></div></footer>
+</body>
+</html>
