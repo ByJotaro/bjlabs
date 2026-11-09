@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Настройка VPS под ключ — BJ Labs</title>
+<meta name="description" content="Удалённая настройка VPS: SSH-ключи, firewall, Docker, Nginx, HTTPS, бэкап с проверкой. 1 900–5 900 ₽, 1–2 часа.">
+<link rel="canonical" href="https://byjotaro.github.io/bjlabs/vps-setup.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F766E'/><text x='50' y='68' font-size='46' font-family='sans-serif' fill='white' text-anchor='middle'>BJ</text></svg>">
+<style>
+  :root{--bg:#fff;--surface:#F5F7FA;--hair:#E6EAF0;--ink:#0F172A;--muted:#475569;--accent:#0F766E;--accent-h:#0B5F59}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}a{color:var(--accent)}
+  header{border-bottom:1px solid var(--hair);position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:16px}
+  .logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--ink)}.logo b{color:var(--accent)}
+  nav{display:flex;gap:18px;flex-wrap:wrap}nav a{font-size:14px;color:var(--muted);text-decoration:none}
+  .hero{padding:56px 0 32px}.hero h1{font-size:clamp(28px,5vw,46px);line-height:1.15;margin:0 0 16px;max-width:22ch}
+  .lead{font-size:18px;color:var(--muted);max-width:65ch}.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:12px}
+  .btn:hover{background:var(--accent-h)}section{padding:28px 0;border-top:1px solid var(--hair)}
+  h2{font-size:24px;margin:0 0 8px}h3{margin:0 0 4px;font-size:18px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:16px}
+  .card{background:var(--surface);border:1px solid var(--hair);border-radius:10px;padding:16px}
+  .card p{margin:6px 0;color:var(--muted);font-size:14px}.price{font-weight:700;color:var(--ink)}
+  ul{margin:8px 0 0 18px;padding:0}li{margin:4px 0}
+  footer{border-top:1px solid var(--hair);padding:22px 0;color:var(--muted);font-size:14px}
+  .note{font-size:14px;color:var(--muted);border-left:3px solid var(--accent);padding-left:12px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="index.html">BJ<b>Labs</b></a>
+  <nav><a href="index.html">Аудит сайта</a><a href="chatbot.html">AI-ассистент</a><a href="#contact">Контакты</a></nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Настройка VPS под ключ — без сюрпризов</h1>
+    <p class="lead">Свежий сервер превращаю в рабочее окружение: SSH-ключи, firewall, Docker, Nginx, HTTPS и бэкап с проверкой восстановления. Удалённо, 1–2 часа.</p>
+    <a class="btn" href="mailto:bay.harbor.144@gmail.com?subject=VPS%20setup&body=Провайдер%3A%0AOS%3A%0AЗадача%3A">Написать про VPS</a>
+  </div>
+
+  <section>
+    <h2>Что входит</h2>
+    <div class="grid">
+      <div class="card"><h3>Basic</h3><p class="price">1 900 ₽</p><p>Ubuntu, non-root пользователь, SSH-ключи, UFW, fail2ban, обновления, swap.</p></div>
+      <div class="card"><h3>Сайт / бот</h3><p class="price">3 900 ₽</p><p>Basic + Docker, Nginx, домен, Let's Encrypt HTTPS, один сервис, health-check.</p></div>
+      <div class="card"><h3>Standard</h3><p class="price">5 900 ₽</p><p>Сайт/бот + restic-бэкап, restore-тест, базовый мониторинг и алерты.</p></div>
+      <div class="card"><h3>Care</h3><p class="price">1 900 ₽/мес</p><p>Обновления, проверка диска/CPU, одна правка, короткий отчёт.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Как проходит</h2>
+    <ul>
+      <li>Вы присылаете провайдера, ОС, IP и временный SSH-доступ.</li>
+      <li>Делаю снапшот, настраиваю, проверяю доступ и сервис.</li>
+      <li>Сдаю доступы в вашем менеджере паролей + короткий README.</li>
+      <li>7 дней гарантии на настройку; ключи после сдачи не храню.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Что не делаю</h2>
+    <p class="note">Не продаю VPN и «обход блокировок», не трогаю чужие данные, не работаю на живом сервере без снапшота. Только администрирование сервера, который принадлежит вам.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Контакты</h2>
+    <p>Email: <a href="mailto:bay.harbor.144@gmail.com">bay.harbor.144@gmail.com</a><br>
+    Viber (текст): <a href="viber://chat?number=%2B37377790217">+373 777 90 217</a><br>
+    Оплата: Unistream / SBP / USDT; 50% предоплата.</p>
+    <p><a href="index.html">← Аудит сайта</a></p>
+  </section>
+</main>
+<footer><div class="wrap">© 2026 BJ Labs · by ByJotaro · Удалённое администрирование VPS</div></footer>
+</body>
+</html>
