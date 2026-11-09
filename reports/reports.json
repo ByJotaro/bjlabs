@@ -66,6 +66,12 @@
   "url": "reports/advokatpmr-ru.html"
  },
  {
+  "domain": "afrodita.md",
+  "slug": "afrodita-md",
+  "score": 95,
+  "url": "reports/afrodita-md.html"
+ },
+ {
   "domain": "agromeh.com",
   "slug": "agromeh-com",
   "score": 77,
@@ -78,10 +84,22 @@
   "url": "reports/aiva-group.html"
  },
  {
+  "domain": "allclinic.md",
+  "slug": "allclinic-md",
+  "score": 89,
+  "url": "reports/allclinic-md.html"
+ },
+ {
   "domain": "alx.md",
   "slug": "alx-md",
   "score": 67,
   "url": "reports/alx-md.html"
+ },
+ {
+  "domain": "amc.md",
+  "slug": "amc-md",
+  "score": 61,
+  "url": "reports/amc-md.html"
  },
  {
   "domain": "amigo.studio",
@@ -90,10 +108,40 @@
   "url": "reports/amigo-studio.html"
  },
  {
+  "domain": "amoramar.md",
+  "slug": "amoramar-md",
+  "score": 65,
+  "url": "reports/amoramar-md.html"
+ },
+ {
+  "domain": "amt-centru.md",
+  "slug": "amt-centru-md",
+  "score": 79,
+  "url": "reports/amt-centru-md.html"
+ },
+ {
+  "domain": "amt-ciocana.md",
+  "slug": "amt-ciocana-md",
+  "score": 59,
+  "url": "reports/amt-ciocana-md.html"
+ },
+ {
   "domain": "anastasia.md",
   "slug": "anastasia-md",
   "score": 70,
   "url": "reports/anastasia-md.html"
+ },
+ {
+  "domain": "andersen.md",
+  "slug": "andersen-md",
+  "score": 77,
+  "url": "reports/andersen-md.html"
+ },
+ {
+  "domain": "andreicocieru.md",
+  "slug": "andreicocieru-md",
+  "score": 79,
+  "url": "reports/andreicocieru-md.html"
  },
  {
   "domain": "anfilada.info",
@@ -178,6 +226,12 @@
   "slug": "autoreal-md",
   "score": 68,
   "url": "reports/autoreal-md.html"
+ },
+ {
+  "domain": "autoshina.md",
+  "slug": "autoshina-md",
+  "score": 77,
+  "url": "reports/autoshina-md.html"
  },
  {
   "domain": "autotuning.md",
@@ -324,6 +378,12 @@
   "url": "reports/billioneir-ru.html"
  },
  {
+  "domain": "biorganic.md",
+  "slug": "biorganic-md",
+  "score": 89,
+  "url": "reports/biorganic-md.html"
+ },
+ {
   "domain": "birja.md",
   "slug": "birja-md",
   "score": 89,
@@ -360,6 +420,12 @@
   "url": "reports/bmk-md.html"
  },
  {
+  "domain": "bmtest.md",
+  "slug": "bmtest-md",
+  "score": 41,
+  "url": "reports/bmtest-md.html"
+ },
+ {
   "domain": "bmw-zapchast.ru",
   "slug": "bmw-zapchast-ru",
   "score": 45,
@@ -376,6 +442,12 @@
   "slug": "bonvoyage-md",
   "score": 73,
   "url": "reports/bonvoyage-md.html"
+ },
+ {
+  "domain": "bravo-motors.md",
+  "slug": "bravo-motors-md",
+  "score": 92,
+  "url": "reports/bravo-motors-md.html"
  },
  {
   "domain": "broker.tiraspol.net",
@@ -408,6 +480,18 @@
   "url": "reports/bunpartener-md.html"
  },
  {
+  "domain": "bus.md",
+  "slug": "bus-md",
+  "score": 76,
+  "url": "reports/bus-md.html"
+ },
+ {
+  "domain": "butoias.md",
+  "slug": "butoias-md",
+  "score": 58,
+  "url": "reports/butoias-md.html"
+ },
+ {
   "domain": "canel.md",
   "slug": "canel-md",
   "score": 68,
@@ -426,6 +510,24 @@
   "url": "reports/carprodt-com.html"
  },
  {
+  "domain": "carsoft.md",
+  "slug": "carsoft-md",
+  "score": 92,
+  "url": "reports/carsoft-md.html"
+ },
+ {
+  "domain": "casaauto.md",
+  "slug": "casaauto-md",
+  "score": 83,
+  "url": "reports/casaauto-md.html"
+ },
+ {
+  "domain": "casadellapizza.md",
+  "slug": "casadellapizza-md",
+  "score": 74,
+  "url": "reports/casadellapizza-md.html"
+ },
+ {
   "domain": "centr-klimata.md",
   "slug": "centr-klimata-md",
   "score": 77,
@@ -438,10 +540,28 @@
   "url": "reports/centrelux-com.html"
  },
  {
+  "domain": "ceradent.md",
+  "slug": "ceradent-md",
+  "score": 77,
+  "url": "reports/ceradent-md.html"
+ },
+ {
   "domain": "chamber.md",
   "slug": "chamber-md",
   "score": 70,
   "url": "reports/chamber-md.html"
+ },
+ {
+  "domain": "chinchinmd.choiceqr.com",
+  "slug": "chinchinmd-choiceqr-com",
+  "score": 76,
+  "url": "reports/chinchinmd-choiceqr-com.html"
+ },
+ {
+  "domain": "ciocarlia.md",
+  "slug": "ciocarlia-md",
+  "score": 79,
+  "url": "reports/ciocarlia-md.html"
  },
  {
   "domain": "cipcons.com",
@@ -472,6 +592,12 @@
   "slug": "conserve-md",
   "score": 80,
   "url": "reports/conserve-md.html"
+ },
+ {
+  "domain": "craftpub.md",
+  "slug": "craftpub-md",
+  "score": 74,
+  "url": "reports/craftpub-md.html"
  },
  {
   "domain": "crearesiteuri.md",
@@ -556,6 +682,12 @@
   "slug": "dentusdentino-md",
   "score": 79,
   "url": "reports/dentusdentino-md.html"
+ },
+ {
+  "domain": "detailgarage.md",
+  "slug": "detailgarage-md",
+  "score": 92,
+  "url": "reports/detailgarage-md.html"
  },
  {
   "domain": "dex-it.ru",
@@ -702,10 +834,22 @@
   "url": "reports/electronica-othod-org.html"
  },
  {
+  "domain": "elitemed.md",
+  "slug": "elitemed-md",
+  "score": 79,
+  "url": "reports/elitemed-md.html"
+ },
+ {
   "domain": "elpro.md",
   "slug": "elpro-md",
   "score": 55,
   "url": "reports/elpro-md.html"
+ },
+ {
+  "domain": "endolife.md",
+  "slug": "endolife-md",
+  "score": 83,
+  "url": "reports/endolife-md.html"
  },
  {
   "domain": "eres.md",
@@ -714,16 +858,40 @@
   "url": "reports/eres-md.html"
  },
  {
+  "domain": "estetic-sana.md",
+  "slug": "estetic-sana-md",
+  "score": 67,
+  "url": "reports/estetic-sana-md.html"
+ },
+ {
+  "domain": "estheticfactory.md",
+  "slug": "estheticfactory-md",
+  "score": 71,
+  "url": "reports/estheticfactory-md.html"
+ },
+ {
   "domain": "euro-rabota.md",
   "slug": "euro-rabota-md",
   "score": 56,
   "url": "reports/euro-rabota-md.html"
  },
  {
+  "domain": "euroasia.md",
+  "slug": "euroasia-md",
+  "score": 56,
+  "url": "reports/euroasia-md.html"
+ },
+ {
   "domain": "eurobox.md",
   "slug": "eurobox-md",
   "score": 70,
   "url": "reports/eurobox-md.html"
+ },
+ {
+  "domain": "eurooptica.md",
+  "slug": "eurooptica-md",
+  "score": 94,
+  "url": "reports/eurooptica-md.html"
  },
  {
   "domain": "eurotehnika.biz",
@@ -822,16 +990,40 @@
   "url": "reports/fitnessone-md.html"
  },
  {
+  "domain": "fluid.md",
+  "slug": "fluid-md",
+  "score": 71,
+  "url": "reports/fluid-md.html"
+ },
+ {
   "domain": "forumclinic.md",
   "slug": "forumclinic-md",
   "score": 47,
   "url": "reports/forumclinic-md.html"
  },
  {
+  "domain": "frizerie.md",
+  "slug": "frizerie-md",
+  "score": 80,
+  "url": "reports/frizerie-md.html"
+ },
+ {
   "domain": "furtuna.pro",
   "slug": "furtuna-pro",
   "score": 76,
   "url": "reports/furtuna-pro.html"
+ },
+ {
+  "domain": "galaxia.md",
+  "slug": "galaxia-md",
+  "score": 65,
+  "url": "reports/galaxia-md.html"
+ },
+ {
+  "domain": "gantala.md",
+  "slug": "gantala-md",
+  "score": 73,
+  "url": "reports/gantala-md.html"
  },
  {
   "domain": "garazh.md",
@@ -924,6 +1116,12 @@
   "url": "reports/gurkb-ru.html"
  },
  {
+  "domain": "gustos.md",
+  "slug": "gustos-md",
+  "score": 79,
+  "url": "reports/gustos-md.html"
+ },
+ {
   "domain": "hi-tech.md",
   "slug": "hi-tech-md",
   "score": 73,
@@ -946,6 +1144,12 @@
   "slug": "hoshutuda-md",
   "score": 73,
   "url": "reports/hoshutuda-md.html"
+ },
+ {
+  "domain": "hotelprezident.md",
+  "slug": "hotelprezident-md",
+  "score": 88,
+  "url": "reports/hotelprezident-md.html"
  },
  {
   "domain": "hotelprietenia.com",
@@ -978,10 +1182,22 @@
   "url": "reports/iek-ru.html"
  },
  {
+  "domain": "ilforno.md",
+  "slug": "ilforno-md",
+  "score": 67,
+  "url": "reports/ilforno-md.html"
+ },
+ {
   "domain": "imebelpmr.ru",
   "slug": "imebelpmr-ru",
   "score": 59,
   "url": "reports/imebelpmr-ru.html"
+ },
+ {
+  "domain": "implantterra.md",
+  "slug": "implantterra-md",
+  "score": 61,
+  "url": "reports/implantterra-md.html"
  },
  {
   "domain": "infinitum-tour.com",
@@ -1014,6 +1230,12 @@
   "url": "reports/invitro-md.html"
  },
  {
+  "domain": "iovudent.md",
+  "slug": "iovudent-md",
+  "score": 71,
+  "url": "reports/iovudent-md.html"
+ },
+ {
   "domain": "irbon.md",
   "slug": "irbon-md",
   "score": 71,
@@ -1030,6 +1252,12 @@
   "slug": "jabgymboxing-com",
   "score": 89,
   "url": "reports/jabgymboxing-com.html"
+ },
+ {
+  "domain": "jeraffe.md",
+  "slug": "jeraffe-md",
+  "score": 61,
+  "url": "reports/jeraffe-md.html"
  },
  {
   "domain": "jeukrybnitsa.idknet.com",
@@ -1050,16 +1278,46 @@
   "url": "reports/karatepmr-org.html"
  },
  {
+  "domain": "katanasushi.md",
+  "slug": "katanasushi-md",
+  "score": 79,
+  "url": "reports/katanasushi-md.html"
+ },
+ {
   "domain": "kedrolavka.com",
   "slug": "kedrolavka-com",
   "score": 74,
   "url": "reports/kedrolavka-com.html"
  },
  {
+  "domain": "kelmanovici.com",
+  "slug": "kelmanovici-com",
+  "score": 64,
+  "url": "reports/kelmanovici-com.html"
+ },
+ {
   "domain": "keramin-pmr.com",
   "slug": "keramin-pmr-com",
   "score": 70,
   "url": "reports/keramin-pmr-com.html"
+ },
+ {
+  "domain": "kh.md",
+  "slug": "kh-md",
+  "score": 67,
+  "url": "reports/kh-md.html"
+ },
+ {
+  "domain": "kia.md",
+  "slug": "kia-md",
+  "score": 67,
+  "url": "reports/kia-md.html"
+ },
+ {
+  "domain": "kimbo.md",
+  "slug": "kimbo-md",
+  "score": 44,
+  "url": "reports/kimbo-md.html"
  },
  {
   "domain": "kinotir.md",
@@ -1072,6 +1330,12 @@
   "slug": "koreashoppmr-com",
   "score": 77,
   "url": "reports/koreashoppmr-com.html"
+ },
+ {
+  "domain": "kozlovna.md",
+  "slug": "kozlovna-md",
+  "score": 58,
+  "url": "reports/kozlovna-md.html"
  },
  {
   "domain": "kraska.md",
@@ -1132,6 +1396,12 @@
   "slug": "laserlove-md",
   "score": 73,
   "url": "reports/laserlove-md.html"
+ },
+ {
+  "domain": "lavida.md",
+  "slug": "lavida-md",
+  "score": 74,
+  "url": "reports/lavida-md.html"
  },
  {
   "domain": "lawyers-moldova.com",
@@ -1200,6 +1470,12 @@
   "url": "reports/lotushotel-md.html"
  },
  {
+  "domain": "lucentdent.md",
+  "slug": "lucentdent-md",
+  "score": 68,
+  "url": "reports/lucentdent-md.html"
+ },
+ {
   "domain": "lursan.com",
   "slug": "lursan-com",
   "score": 76,
@@ -1230,10 +1506,22 @@
   "url": "reports/magnumestetic-md.html"
  },
  {
+  "domain": "maguro.md",
+  "slug": "maguro-md",
+  "score": 59,
+  "url": "reports/maguro-md.html"
+ },
+ {
   "domain": "markapmr.ru",
   "slug": "markapmr-ru",
   "score": 64,
   "url": "reports/markapmr-ru.html"
+ },
+ {
+  "domain": "master-lux.md",
+  "slug": "master-lux-md",
+  "score": 67,
+  "url": "reports/master-lux-md.html"
  },
  {
   "domain": "masteram.md",
@@ -1276,6 +1564,12 @@
   "slug": "mdental-md",
   "score": 73,
   "url": "reports/mdental-md.html"
+ },
+ {
+  "domain": "medart.md",
+  "slug": "medart-md",
+  "score": 77,
+  "url": "reports/medart-md.html"
  },
  {
   "domain": "medin.md",
@@ -1362,6 +1656,12 @@
   "url": "reports/modernhome-md.html"
  },
  {
+  "domain": "moika.md",
+  "slug": "moika-md",
+  "score": 59,
+  "url": "reports/moika-md.html"
+ },
+ {
   "domain": "moldgres.com",
   "slug": "moldgres-com",
   "score": 61,
@@ -1390,6 +1690,12 @@
   "slug": "mup-gorimushestvo-org",
   "score": 55,
   "url": "reports/mup-gorimushestvo-org.html"
+ },
+ {
+  "domain": "muzcafe.md",
+  "slug": "muzcafe-md",
+  "score": 55,
+  "url": "reports/muzcafe-md.html"
  },
  {
   "domain": "my-clinic.md",
@@ -1422,16 +1728,34 @@
   "url": "reports/nedvijimost-md.html"
  },
  {
+  "domain": "neuroscan.md",
+  "slug": "neuroscan-md",
+  "score": 92,
+  "url": "reports/neuroscan-md.html"
+ },
+ {
   "domain": "nikba.com",
   "slug": "nikba-com",
   "score": 92,
   "url": "reports/nikba-com.html"
  },
  {
+  "domain": "niponauto.md",
+  "slug": "niponauto-md",
+  "score": 68,
+  "url": "reports/niponauto-md.html"
+ },
+ {
   "domain": "oboi-pmr.ru",
   "slug": "oboi-pmr-ru",
   "score": 65,
   "url": "reports/oboi-pmr-ru.html"
+ },
+ {
+  "domain": "odelle.md",
+  "slug": "odelle-md",
+  "score": 80,
+  "url": "reports/odelle-md.html"
  },
  {
   "domain": "odema.md",
@@ -1474,6 +1798,12 @@
   "slug": "okras-metall-ru",
   "score": 67,
   "url": "reports/okras-metall-ru.html"
+ },
+ {
+  "domain": "old.amtbuiucani.md",
+  "slug": "old-amtbuiucani-md",
+  "score": 70,
+  "url": "reports/old-amtbuiucani-md.html"
  },
  {
   "domain": "omega-gc.ru",
@@ -1560,6 +1890,12 @@
   "url": "reports/pivo-bendery-com.html"
  },
  {
+  "domain": "pizzamania.md",
+  "slug": "pizzamania-md",
+  "score": 83,
+  "url": "reports/pizzamania-md.html"
+ },
+ {
   "domain": "pjdpmr.com",
   "slug": "pjdpmr-com",
   "score": 53,
@@ -1638,6 +1974,18 @@
   "url": "reports/primdent-md.html"
  },
  {
+  "domain": "pro-med.md",
+  "slug": "pro-med-md",
+  "score": 64,
+  "url": "reports/pro-med-md.html"
+ },
+ {
+  "domain": "proauto.md",
+  "slug": "proauto-md",
+  "score": 83,
+  "url": "reports/proauto-md.html"
+ },
+ {
   "domain": "proect-ardicon.ru",
   "slug": "proect-ardicon-ru",
   "score": 71,
@@ -1662,10 +2010,22 @@
   "url": "reports/promcold-md.html"
  },
  {
+  "domain": "proparts.md",
+  "slug": "proparts-md",
+  "score": 82,
+  "url": "reports/proparts-md.html"
+ },
+ {
   "domain": "prosto-obuw.com",
   "slug": "prosto-obuw-com",
   "score": 70,
   "url": "reports/prosto-obuw-com.html"
+ },
+ {
+  "domain": "proturbo.md",
+  "slug": "proturbo-md",
+  "score": 68,
+  "url": "reports/proturbo-md.html"
  },
  {
   "domain": "prowebdesign.md",
@@ -1710,10 +2070,22 @@
   "url": "reports/realist-md.html"
  },
  {
+  "domain": "reginapacis.org",
+  "slug": "reginapacis-org",
+  "score": 70,
+  "url": "reports/reginapacis-org.html"
+ },
+ {
   "domain": "rentacarmd.ru",
   "slug": "rentacarmd-ru",
   "score": 64,
   "url": "reports/rentacarmd-ru.html"
+ },
+ {
+  "domain": "repromed.md",
+  "slug": "repromed-md",
+  "score": 68,
+  "url": "reports/repromed-md.html"
  },
  {
   "domain": "revolutionestate.md",
@@ -1740,6 +2112,12 @@
   "url": "reports/richagro-net.html"
  },
  {
+  "domain": "rihtovka.md",
+  "slug": "rihtovka-md",
+  "score": 71,
+  "url": "reports/rihtovka-md.html"
+ },
+ {
   "domain": "ritual-granit.info",
   "slug": "ritual-granit-info",
   "score": 71,
@@ -1764,10 +2142,22 @@
   "url": "reports/rose-md.html"
  },
  {
+  "domain": "royalthai.md",
+  "slug": "royalthai-md",
+  "score": 74,
+  "url": "reports/royalthai-md.html"
+ },
+ {
   "domain": "rric.org",
   "slug": "rric-org",
   "score": 56,
   "url": "reports/rric-org.html"
+ },
+ {
+  "domain": "rst.md",
+  "slug": "rst-md",
+  "score": 61,
+  "url": "reports/rst-md.html"
  },
  {
   "domain": "rtb.minzdrav.gospmr.org",
@@ -1788,16 +2178,34 @@
   "url": "reports/sahtiraspol-org.html"
  },
  {
+  "domain": "salcioara.md",
+  "slug": "salcioara-md",
+  "score": 68,
+  "url": "reports/salcioara-md.html"
+ },
+ {
   "domain": "salvadentsmile.md",
   "slug": "salvadentsmile-md",
   "score": 62,
   "url": "reports/salvadentsmile-md.html"
  },
  {
+  "domain": "sancos.md",
+  "slug": "sancos-md",
+  "score": 73,
+  "url": "reports/sancos-md.html"
+ },
+ {
   "domain": "sandani.ru",
   "slug": "sandani-ru",
   "score": 65,
   "url": "reports/sandani-ru.html"
+ },
+ {
+  "domain": "sante.md",
+  "slug": "sante-md",
+  "score": 82,
+  "url": "reports/sante-md.html"
  },
  {
   "domain": "santehkomplekt.md",
@@ -1810,6 +2218,12 @@
   "slug": "santek-md",
   "score": 65,
   "url": "reports/santek-md.html"
+ },
+ {
+  "domain": "saperavi.md",
+  "slug": "saperavi-md",
+  "score": 86,
+  "url": "reports/saperavi-md.html"
  },
  {
   "domain": "savatrans.md",
@@ -1872,6 +2286,12 @@
   "url": "reports/shop-tirelcom-net.html"
  },
  {
+  "domain": "sistersdent.md",
+  "slug": "sistersdent-md",
+  "score": 79,
+  "url": "reports/sistersdent-md.html"
+ },
+ {
   "domain": "slobmuzey.tilda.ws",
   "slug": "slobmuzey-tilda-ws",
   "score": 77,
@@ -1926,10 +2346,22 @@
   "url": "reports/stroika-artstil-md.html"
  },
  {
+  "domain": "superdent.md",
+  "slug": "superdent-md",
+  "score": 65,
+  "url": "reports/superdent-md.html"
+ },
+ {
   "domain": "svp.md",
   "slug": "svp-md",
   "score": 79,
   "url": "reports/svp-md.html"
+ },
+ {
+  "domain": "takumi.md",
+  "slug": "takumi-md",
+  "score": 82,
+  "url": "reports/takumi-md.html"
  },
  {
   "domain": "td-30.com",
@@ -1966,6 +2398,42 @@
   "slug": "teplie-okna-md",
   "score": 65,
   "url": "reports/teplie-okna-md.html"
+ },
+ {
+  "domain": "teremokpmr.ru",
+  "slug": "teremokpmr-ru",
+  "score": 62,
+  "url": "reports/teremokpmr-ru.html"
+ },
+ {
+  "domain": "termal.md",
+  "slug": "termal-md",
+  "score": 73,
+  "url": "reports/termal-md.html"
+ },
+ {
+  "domain": "terramed.md",
+  "slug": "terramed-md",
+  "score": 92,
+  "url": "reports/terramed-md.html"
+ },
+ {
+  "domain": "tesalia.md",
+  "slug": "tesalia-md",
+  "score": 65,
+  "url": "reports/tesalia-md.html"
+ },
+ {
+  "domain": "thebox.md",
+  "slug": "thebox-md",
+  "score": 100,
+  "url": "reports/thebox-md.html"
+ },
+ {
+  "domain": "tibetmed.md",
+  "slug": "tibetmed-md",
+  "score": 71,
+  "url": "reports/tibetmed-md.html"
  },
  {
   "domain": "tiffani.md",
