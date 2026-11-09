@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://byjotaro.github.io/bjlabs/sitemap.xml
