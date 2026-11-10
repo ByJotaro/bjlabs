@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang='ru'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Демо ассистента для стоматологии — BJ Labs</title>
+<meta name='description' content='Демонстрационный ассистент стоматологии: отвечает по страницам клиники, показывает источник и передаёт вопрос администратору. Пример, не реальная клиника.'>
+<style>
+:root{--bg:#161513;--card:#1c1a18;--raised:#262421;--text:#efe9de;--muted:#9b9489;--line:#332f2b;--accent:#5eead4;--mono:ui-monospace,Consolas,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,Segoe UI,Roboto,Arial,sans-serif}a{color:inherit}
+.wrap{max-width:1060px;margin:auto;padding:0 24px}.nav{height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.logo{font-size:18px;text-decoration:none}.logo b{color:var(--accent);font-weight:500}.nav a.cta,.btn{display:inline-flex;align-items:center;height:38px;padding:0 15px;border:1px solid var(--line);border-radius:8px;background:var(--raised);text-decoration:none;font-size:14px}.nav a.cta:hover,.btn:hover{border-color:#5a544c}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center;padding:72px 0}.eyebrow{font:12px/1.5 var(--mono);color:var(--muted)}h1{font-size:clamp(30px,4vw,44px);line-height:1.08;font-weight:500;letter-spacing:-.02em;margin:14px 0 16px}.lead{color:#c9c2b7;font-size:17px;margin:0 0 18px}.note{color:var(--muted);font-size:13px;max-width:38rem}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}.chat-head{display:flex;justify-content:space-between;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--line);font:12px var(--mono);color:var(--muted)}.log{height:300px;overflow:auto;padding:4px 2px}.bubble{margin:14px 0 0;max-width:86%;font-size:14px;line-height:1.55}.user{margin-left:auto;background:var(--raised);border:1px solid var(--line);border-radius:10px;padding:9px 11px}.bot{padding:2px 0}.source{margin-top:8px;padding-left:9px;border-left:2px solid var(--accent);font:11px/1.5 var(--mono);color:var(--accent)}form{display:flex;gap:8px;margin-top:14px}input{flex:1;min-width:0;height:42px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);padding:0 11px;font:inherit}button{height:42px;border:0;border-radius:8px;background:var(--accent);color:#10201e;font-weight:600;padding:0 15px;cursor:pointer}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.chips button{height:30px;background:transparent;border:1px solid var(--line);color:#c9c2b7;font:12px system-ui;font-weight:400;padding:0 9px}.foot{border-top:1px solid var(--line);padding:26px 0 42px;color:var(--muted);font-size:13px}.foot a{color:var(--accent)}@media(max-width:800px){.hero{grid-template-columns:1fr;padding:44px 0}.nav a.cta{display:none}.log{height:260px}}
+</style>
+</head>
+<body>
+<header class='wrap nav'><a class='logo' href='index.html'>BJ <b>Labs</b></a><a class='cta' href='mailto:bay.harbor.144@gmail.com?subject=Демо%20для%20клиники'>Запросить для своей клиники</a></header>
+<main class='wrap'>
+<section class='hero'>
+<div>
+<div class='eyebrow'>ДЕМО · ПРИМЕР, НЕ РЕАЛЬНАЯ КЛИНИКА</div>
+<h1>Ассистент стоматологии «Пример»</h1>
+<p class='lead'>Спросите про имплантацию, запись или подготовку к приёму. Ассистент отвечает по демо-страницам, показывает источник и передаёт вопрос человеку, если ответа нет.</p>
+<p class='note'>Название, цены, адрес и телефон здесь вымышлены. Для вашей клиники ассистент собирается по вашим публичным страницам; персональное демо — 24–48 часов. Это не медицинская рекомендация и не заменяет врача.</p>
+</div>
+<figure class='card' style='margin:0'>
+<div class='chat-head'><span>Ассистент клиники</span><span>отвечает по страницам</span></div>
+<div class='log' id='log' aria-live='polite'>
+<p class='bubble bot'>Здравствуйте! Я ассистент клиники «Пример». Спросите про имплантацию, запись или подготовку к приёму.</p>
+</div>
+<div class='chips'>
+<button type='button' data-q='Сколько стоит имплантация?'>Сколько стоит имплантация?</button>
+<button type='button' data-q='Как записаться?'>Как записаться?</button>
+<button type='button' data-q='Принимаете детей?'>Принимаете детей?</button>
+<button type='button' data-q='Что взять на приём?'>Что взять на приём?</button>
+</div>
+<form id='f'><input id='q' maxlength='200' autocomplete='off' placeholder='Ваш вопрос' aria-label='Ваш вопрос'><button type='submit'>Спросить</button></form>
+</figure>
+</section>
+</main>
+<footer class='wrap foot'>BJ Labs · <a href='chatbot.html'>как это работает</a> · <a href='mailto:bay.harbor.144@gmail.com?subject=Демо%20для%20клиники'>запросить демо для своей клиники</a></footer>
+<script>
+(function(){
+  'use strict';
+  var log=document.getElementById('log'), form=document.getElementById('f'), input=document.getElementById('q');
+  var kb=[
+    {re:/имплант|имплантац/i,a:'Имплантация — от 38 000 ₽ за имплант, коронка — от 18 000 ₽. Точную смету врач составляет после КТ. Это демо-цена.',s:'демо-прайс, «Имплантация»'},
+    {re:/консультац|первичн/i,a:'Первичная консультация — 0 ₽ при записи на лечение; повторная — 500 ₽. Демо-цена.',s:'демо-прайс, «Консультация»'},
+    {re:/запис|прием|приём|онлайн/i,a:'Онлайн-запись работает 24/7; администратор отвечает с 9:00 до 21:00. Телефон в демо: +7 (900) 000-00-00.',s:'демо-контакты, «Запись»'},
+    {re:/адрес|где вы|находит|метро/i,a:'Демо-адрес: ул. Примерная, 1, 5 минут от метро. В реальном ассистенте — ваш адрес с карты.',s:'демо-контакты, «Адрес»'},
+    {re:/ребен|дет/i,a:'Да, принимаем детей с 3 лет; детский приём — по записи.',s:'демо-страница, «Детский приём»'},
+    {re:/рассроч|оплат|дорого|цена/i,a:'Лечение можно разделить на 6 месяцев без процентов; условия — демо. Точную стоимость считает врач после осмотра.',s:'демо-прайс, «Оплата»'},
+    {re:/взять|подготов|сним|кт|документ/i,a:'Возьмите паспорт и снимки/КТ, если есть; приходите за 10 минут до приёма.',s:'демо-страница, «Подготовка»'},
+    {re:/врач|доктор|кто лечит|специалист/i,a:'В демо имя не указано; в реальном ассистенте — ваши врачи и специализации.',s:'демо-страница, «Врачи»'},
+    {re:/гарант/i,a:'Гарантия на лечение — 1 год, на импланты — по производителю; точные условия — в договоре (демо).',s:'демо-страница, «Гарантия»'}
+  ];
+  function answer(q){
+    for(var i=0;i<kb.length;i++){ if(kb[i].re.test(q)) return kb[i]; }
+    return {a:'В демо-страницах ответа нет. В реальном ассистенте вопрос уйдёт администратору — без выдуманного ответа.',s:'передано человеку · вопрос в журнале'};
+  }
+  function add(cls,text){var p=document.createElement('p');p.className='bubble '+cls;p.textContent=text;log.appendChild(p);return p}
+  function ask(q){
+    q=(q||'').trim(); if(!q) return;
+    add('user',q); var r=answer(q); add('bot',r.a);
+    var s=document.createElement('div');s.className='source';s.textContent='источник · '+r.s;log.appendChild(s);
+    log.scrollTop=log.scrollHeight; input.value=''; input.focus();
+  }
+  form.addEventListener('submit',function(e){e.preventDefault();ask(input.value)});
+  Array.prototype.forEach.call(document.querySelectorAll('[data-q]'),function(b){b.addEventListener('click',function(){ask(b.getAttribute('data-q'))})});
+})();
+</script>
+</body>
+</html>
