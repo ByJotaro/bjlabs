@@ -120,6 +120,7 @@
   }
   @media (max-width:640px){
     .wrap{padding:0 20px}
+    .nav-extra{display:none}
     h1{font-size:clamp(32px,8vw,40px)}
     .actions .btn{width:100%}
     .features{grid-template-columns:1fr}
@@ -135,7 +136,10 @@
 <header class="wrap">
   <div class="nav">
     <a class="logo" href="index.html">BJ <b>Labs</b></a>
-    <a class="nav-cta" href="mailto:bay.harbor.144@gmail.com?subject=Администратор%20сайта">Запросить демо</a>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a class="nav-cta nav-extra" href="clinic-demo.html">Пример для клиники</a>
+      <a class="nav-cta" href="mailto:bay.harbor.144@gmail.com?subject=Администратор%20сайта">Запросить демо</a>
+    </div>
   </div>
 </header>
 <main class="wrap">
