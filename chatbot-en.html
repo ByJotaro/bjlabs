@@ -320,6 +320,7 @@
     ev.preventDefault();
     var q = input.value.trim();
     if (!q) return;
+    log.textContent = "";
     var qb = document.createElement("div");
     qb.className = "pv-q";
     qb.textContent = q;
