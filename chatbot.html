@@ -51,11 +51,16 @@
   .pv-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line)}
   .pv-title{font-family:var(--mono);font-size:12px;color:var(--secondary);font-weight:400}
   .pv-tag{font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .pv-log{max-height:300px;overflow:auto;padding-right:4px;scrollbar-width:thin}
   .pv-q{justify-self:end;max-width:82%;margin:20px 0 0 auto;background:var(--raised);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;color:var(--secondary)}
+  .pv-log .pv-q:first-child{margin-top:0}
   .pv-a{margin:16px 0 0;font-size:15px;line-height:1.55;max-width:52ch}
   .pv-src{margin-top:14px;padding-left:10px;border-left:2px solid var(--accent);font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--accent)}
   .pv-input{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;height:44px;padding:0 12px 0 14px;border:1px solid var(--line-strong);border-radius:10px;color:var(--muted);font-size:14px}
-  .pv-send{display:grid;place-items:center;width:28px;height:28px;border:0;border-radius:6px;background:var(--raised);color:var(--accent)}
+  .pv-input input{flex:1;min-width:0;border:0;background:transparent;color:var(--text);font:inherit;outline:none}
+  .pv-input input::placeholder{color:var(--muted)}
+  .pv-send{display:grid;place-items:center;width:28px;height:28px;border:0;border-radius:6px;background:var(--raised);color:var(--accent);cursor:pointer}
+  .pv-send:disabled{opacity:.5;cursor:default}
 
   section{padding:80px 0 0}
   h2{font-size:clamp(24px,2.6vw,32px);line-height:1.15;letter-spacing:-.01em;font-weight:500;margin:0 0 12px}
@@ -150,16 +155,19 @@
         <span class="pv-title">Демо · BJ Labs</span>
         <span class="pv-tag">ответ по странице</span>
       </div>
-      <div class="pv-q">Сколько стоит аудит?</div>
-      <p class="pv-a">Аудит — 25 проверок и отчёт со скором 0–100. Фикс: €60 за три критичных правки (1–2 дня) или €90 за полный пакет (2–3 дня).</p>
-      <div class="pv-src">источник · proposal.html, «Стоимость и сроки»</div>
-      <div class="pv-input">
-        <span>Спросите про цены и сроки</span>
-        <span class="pv-send" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
+      <div class="pv-log" id="pv-log" aria-live="polite">
+        <div class="pv-q">Сколько стоит аудит?</div>
+        <p class="pv-a">Аудит — 25 проверок и отчёт со скором 0–100. Фикс: €60 за три критичных правки (1–2 дня) или €90 за полный пакет (2–3 дня).</p>
+        <div class="pv-src">источник · <a href="proposal.html">proposal.html</a>, «Стоимость и сроки»</div>
       </div>
-      <figcaption>Пример ответа демо-ассистента</figcaption>
+      <form class="pv-input" id="pv-form">
+        <label class="sr" for="pv-q">Ваш вопрос</label>
+        <input id="pv-q" type="text" maxlength="200" autocomplete="off" placeholder="Спросите про цены и сроки">
+        <button class="pv-send" type="submit" aria-label="Отправить">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+      <figcaption>Интерактивный пример по этому лендингу · без внешней модели</figcaption>
     </figure>
   </section>
 
@@ -256,5 +264,82 @@
     <span><a href="mailto:bay.harbor.144@gmail.com">bay.harbor.144@gmail.com</a> · <a href="index.html">услуги</a> · <a href="chatbot-en.html">English</a></span>
   </div>
 </footer>
+<script>
+(function () {
+  "use strict";
+  var log = document.getElementById("pv-log");
+  var form = document.getElementById("pv-form");
+  var input = document.getElementById("pv-q");
+  var kb = [
+    {
+      re: /ассистент|виджет|чат-?бот|chatbot/i,
+      a: "Ассистент отвечает по страницам сайта, показывает источник и передаёт диалог человеку. Запуск — €190, первый месяц включён, далее €29/мес; до 40 страниц и один язык.",
+      s: "chatbot.html, «Стоимость»"
+    },
+    {
+      re: /аудит|проверк|скор|€\s*60|€\s*90|60\s*€|90\s*€/i,
+      a: "Аудит — 25 проверок и отчёт со скором 0–100. Фикс: €60 за три критичных правки (1–2 дня) или €90 за полный пакет (2–3 дня).",
+      s: "proposal.html, «Стоимость и сроки»"
+    },
+    {
+      re: /сколько\s+стоит|цена|стоимост|прайс/i,
+      a: "Аудит — €60 за три критичных правки или €90 за полный пакет. Ассистент — €190 запуск + €29/мес, первый месяц включён.",
+      s: "chatbot.html, «Стоимость»"
+    },
+    {
+      re: /срок|быстро|когда|запуск|день/i,
+      a: "Старт — 1–3 рабочих дня после получения страниц. Демо на ваших страницах — за 24–48 ч.",
+      s: "chatbot.html, «Как запускаем»"
+    },
+    {
+      re: /оплат|рубл|карт|paypal|payoneer|unistream|перевод/i,
+      a: "В рублях — Unistream на имя получателя в Тирасполе; для ЕС и США — PayPal по инвойсу, Payoneer, Western Union или банковский перевод.",
+      s: "chatbot.html, «Оплата из РФ»"
+    },
+    {
+      re: /подключ|установ|script|скрипт|страниц|sitemap/i,
+      a: "Присылаете ссылку на сайт и страницы или sitemap; индексируем текст, настраиваем тон и контакты, вставляете один тег script на сайт.",
+      s: "chatbot.html, «Как запускаем»"
+    },
+    {
+      re: /выдум|источник|ошиб|медицин|совет/i,
+      a: "Ассистент не выдумывает цены и не даёт медицинских советов. Если ответа нет в страницах — предлагает контакт человека.",
+      s: "chatbot.html, «Когда не знает»"
+    }
+  ];
+
+  function answerFor(q) {
+    for (var i = 0; i < kb.length; i++) {
+      if (kb[i].re.test(q)) return kb[i];
+    }
+    return {
+      a: "В материалах этой страницы ответа нет. Уточню у человека — напишите на bay.harbor.144@gmail.com.",
+      s: "передано человеку · вопрос в журнале"
+    };
+  }
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var q = input.value.trim();
+    if (!q) return;
+    var qb = document.createElement("div");
+    qb.className = "pv-q";
+    qb.textContent = q;
+    log.appendChild(qb);
+    var r = answerFor(q);
+    var ab = document.createElement("p");
+    ab.className = "pv-a";
+    ab.textContent = r.a;
+    log.appendChild(ab);
+    var sb = document.createElement("div");
+    sb.className = "pv-src";
+    sb.textContent = "источник · " + r.s;
+    log.appendChild(sb);
+    log.scrollTop = log.scrollHeight;
+    input.value = "";
+    input.focus();
+  });
+})();
+</script>
 </body>
 </html>

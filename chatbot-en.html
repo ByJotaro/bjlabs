@@ -51,11 +51,17 @@
   .pv-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line)}
   .pv-title{font-family:var(--mono);font-size:12px;color:var(--secondary);font-weight:400}
   .pv-tag{font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .pv-log{max-height:300px;overflow:auto;padding-right:4px;scrollbar-width:thin}
   .pv-q{justify-self:end;max-width:82%;margin:20px 0 0 auto;background:var(--raised);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;color:var(--secondary)}
+  .pv-log .pv-q:first-child{margin-top:0}
   .pv-a{margin:16px 0 0;font-size:15px;line-height:1.55;max-width:52ch}
   .pv-src{margin-top:14px;padding-left:10px;border-left:2px solid var(--accent);font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--accent)}
   .pv-input{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;height:44px;padding:0 12px 0 14px;border:1px solid var(--line-strong);border-radius:10px;color:var(--muted);font-size:14px}
-  .pv-send{display:grid;place-items:center;width:28px;height:28px;border:0;border-radius:6px;background:var(--raised);color:var(--accent)}
+  .pv-input input{flex:1;min-width:0;border:0;background:transparent;color:var(--text);font:inherit;outline:none}
+  .pv-input input::placeholder{color:var(--muted)}
+  .pv-send{display:grid;place-items:center;width:28px;height:28px;border:0;border-radius:6px;background:var(--raised);color:var(--accent);cursor:pointer}
+  .pv-send:disabled{opacity:.5;cursor:default}
+  .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
   section{padding:80px 0 0}
   h2{font-size:clamp(24px,2.6vw,32px);line-height:1.15;letter-spacing:-.01em;font-weight:500;margin:0 0 12px}
@@ -149,16 +155,19 @@
         <span class="pv-title">Demo · BJ Labs</span>
         <span class="pv-tag">answer from a page</span>
       </div>
-      <div class="pv-q">How much is the audit?</div>
-      <p class="pv-a">The audit is 25 checks plus a report with a 0–100 score. The fix pack is €60 for three critical fixes (1–2 days) or €90 for the full pack (2–3 days).</p>
-      <div class="pv-src">source · proposal.html, "Pricing and timelines"</div>
-      <div class="pv-input">
-        <span>Ask about prices and timelines</span>
-        <span class="pv-send" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
+      <div class="pv-log" id="pv-log" aria-live="polite">
+        <div class="pv-q">How much is the audit?</div>
+        <p class="pv-a">The audit is 25 checks plus a report with a 0–100 score. The fix pack is €60 for three critical fixes (1–2 days) or €90 for the full pack (2–3 days).</p>
+        <div class="pv-src">source · <a href="proposal.html">proposal.html</a>, "Pricing and timelines"</div>
       </div>
-      <figcaption>A sample answer from the demo assistant</figcaption>
+      <form class="pv-input" id="pv-form">
+        <label class="sr" for="pv-q">Your question</label>
+        <input id="pv-q" type="text" maxlength="200" autocomplete="off" placeholder="Ask about prices and timelines">
+        <button class="pv-send" type="submit" aria-label="Send">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+      <figcaption>Interactive example on this landing page · no external model</figcaption>
     </figure>
   </section>
 
@@ -253,5 +262,82 @@
     <span><a href="mailto:bay.harbor.144@gmail.com">bay.harbor.144@gmail.com</a> · <a href="index.html">services</a> · <a href="chatbot.html">Русский</a></span>
   </div>
 </footer>
+<script>
+(function () {
+  "use strict";
+  var log = document.getElementById("pv-log");
+  var form = document.getElementById("pv-form");
+  var input = document.getElementById("pv-q");
+  var kb = [
+    {
+      re: /assistant|widget|chat-?bot/i,
+      a: "The assistant answers from your site pages, cites the source and hands the conversation to a human. Setup is €190, first month included, then €29/mo; up to 40 pages and one language.",
+      s: "chatbot-en.html, \"Pricing\""
+    },
+    {
+      re: /audit|check|score|€\s*60|€\s*90|60\s*€|90\s*€/i,
+      a: "The audit is 25 checks plus a report with a 0–100 score. The fix pack is €60 for three critical fixes (1–2 days) or €90 for the full pack (2–3 days).",
+      s: "proposal.html, \"Pricing and timelines\""
+    },
+    {
+      re: /how much|price|cost|pricing/i,
+      a: "Audit — €60 for three critical fixes or €90 for the full pack. Assistant — €190 setup + €29/mo, first month included.",
+      s: "chatbot-en.html, \"Pricing\""
+    },
+    {
+      re: /timeline|when|start|day|fast/i,
+      a: "Start is 1–3 business days after we receive your pages. A demo on your pages takes 24–48 hours.",
+      s: "chatbot-en.html, \"How we launch\""
+    },
+    {
+      re: /pay|payment|card|paypal|payoneer|unistream|transfer/i,
+      a: "For the EU and US — PayPal by invoice, Payoneer, Western Union or bank transfer. For Moldova/PMR — invoice or cash; RUB transfers are agreed separately.",
+      s: "chatbot-en.html, \"How we launch\""
+    },
+    {
+      re: /setup|install|script|pages|sitemap|connect/i,
+      a: "Send the site URL and pages or sitemap; we index the text, set the tone and contacts, and you add one script tag to the site.",
+      s: "chatbot-en.html, \"How we launch\""
+    },
+    {
+      re: /invent|source|error|medical|advice/i,
+      a: "The assistant does not invent prices or give medical advice. If the answer is not in the pages, it offers a human contact.",
+      s: "chatbot-en.html, \"When it does not know\""
+    }
+  ];
+
+  function answerFor(q) {
+    for (var i = 0; i < kb.length; i++) {
+      if (kb[i].re.test(q)) return kb[i];
+    }
+    return {
+      a: "This page does not contain that answer. I'll check with a human — email bay.harbor.144@gmail.com.",
+      s: "handed to a human · question logged"
+    };
+  }
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var q = input.value.trim();
+    if (!q) return;
+    var qb = document.createElement("div");
+    qb.className = "pv-q";
+    qb.textContent = q;
+    log.appendChild(qb);
+    var r = answerFor(q);
+    var ab = document.createElement("p");
+    ab.className = "pv-a";
+    ab.textContent = r.a;
+    log.appendChild(ab);
+    var sb = document.createElement("div");
+    sb.className = "pv-src";
+    sb.textContent = "source · " + r.s;
+    log.appendChild(sb);
+    log.scrollTop = log.scrollHeight;
+    input.value = "";
+    input.focus();
+  });
+})();
+</script>
 </body>
 </html>
