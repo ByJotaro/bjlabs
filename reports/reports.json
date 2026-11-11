@@ -1434,6 +1434,12 @@
   "url": "reports/hi-tech-md.html"
  },
  {
+  "domain": "hippocrates.md",
+  "slug": "hippocrates-md",
+  "score": 62,
+  "url": "reports/hippocrates-md.html"
+ },
+ {
   "domain": "hit-time.net",
   "slug": "hit-time-net",
   "score": 73,
@@ -1468,6 +1474,12 @@
   "slug": "hotelrussia-md",
   "score": 64,
   "url": "reports/hotelrussia-md.html"
+ },
+ {
+  "domain": "hotelzarea.com",
+  "slug": "hotelzarea-com",
+  "score": 68,
+  "url": "reports/hotelzarea-com.html"
  },
  {
   "domain": "i-avocat.md",
@@ -1858,6 +1870,12 @@
   "slug": "mc-md",
   "score": 59,
   "url": "reports/mc-md.html"
+ },
+ {
+  "domain": "mcdonalds.md",
+  "slug": "mcdonalds-md",
+  "score": 58,
+  "url": "reports/mcdonalds-md.html"
  },
  {
   "domain": "mcl.md",
@@ -2626,6 +2644,12 @@
   "slug": "starbendery-com",
   "score": 62,
   "url": "reports/starbendery-com.html"
+ },
+ {
+  "domain": "starkebab.md",
+  "slug": "starkebab-md",
+  "score": 59,
+  "url": "reports/starkebab-md.html"
  },
  {
   "domain": "sto-md.ru",
