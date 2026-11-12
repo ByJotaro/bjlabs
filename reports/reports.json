@@ -18,6 +18,12 @@
   "url": "reports/100letnik-md.html"
  },
  {
+  "domain": "1belagro.com",
+  "slug": "1belagro-com",
+  "score": 64,
+  "url": "reports/1belagro-com.html"
+ },
+ {
   "domain": "1stgallery.ru",
   "slug": "1stgallery-ru",
   "score": 70,
@@ -28,6 +34,12 @@
   "slug": "2chak-ru",
   "score": 58,
   "url": "reports/2chak-ru.html"
+ },
+ {
+  "domain": "3iumf.ru",
+  "slug": "3iumf-ru",
+  "score": 67,
+  "url": "reports/3iumf-ru.html"
  },
  {
   "domain": "3puti.md",
@@ -48,10 +60,22 @@
   "url": "reports/585zolotoy-ru.html"
  },
  {
+  "domain": "abakus-center.ru",
+  "slug": "abakus-center-ru",
+  "score": 74,
+  "url": "reports/abakus-center-ru.html"
+ },
+ {
   "domain": "abro-rus.ru",
   "slug": "abro-rus-ru",
   "score": 61,
   "url": "reports/abro-rus-ru.html"
+ },
+ {
+  "domain": "absolutins.ru",
+  "slug": "absolutins-ru",
+  "score": 73,
+  "url": "reports/absolutins-ru.html"
  },
  {
   "domain": "academy.fc-sheriff.com",
@@ -124,6 +148,12 @@
   "slug": "agromeh-com",
   "score": 77,
   "url": "reports/agromeh-com.html"
+ },
+ {
+  "domain": "aircool.ru",
+  "slug": "aircool-ru",
+  "score": 61,
+  "url": "reports/aircool-ru.html"
  },
  {
   "domain": "aiva.group",
@@ -358,6 +388,12 @@
   "slug": "aptekadoktor-com",
   "score": 61,
   "url": "reports/aptekadoktor-com.html"
+ },
+ {
+  "domain": "aptekidona.ru",
+  "slug": "aptekidona-ru",
+  "score": 76,
+  "url": "reports/aptekidona-ru.html"
  },
  {
   "domain": "aquadom.md",
@@ -648,6 +684,12 @@
   "url": "reports/bazhim-ru.html"
  },
  {
+  "domain": "beauty-shop.ru",
+  "slug": "beauty-shop-ru",
+  "score": 62,
+  "url": "reports/beauty-shop-ru.html"
+ },
+ {
   "domain": "beautystudio.md",
   "slug": "beautystudio-md",
   "score": 74,
@@ -792,6 +834,12 @@
   "url": "reports/bmw-zapchast-ru.html"
  },
  {
+  "domain": "bns-group.ru",
+  "slug": "bns-group-ru",
+  "score": 52,
+  "url": "reports/bns-group-ru.html"
+ },
+ {
   "domain": "bonsanco.md",
   "slug": "bonsanco-md",
   "score": 82,
@@ -808,6 +856,12 @@
   "slug": "bravo-motors-md",
   "score": 92,
   "url": "reports/bravo-motors-md.html"
+ },
+ {
+  "domain": "brightpark.ru",
+  "slug": "brightpark-ru",
+  "score": 71,
+  "url": "reports/brightpark-ru.html"
  },
  {
   "domain": "broker.tiraspol.net",
@@ -864,6 +918,18 @@
   "url": "reports/caracas-md.html"
  },
  {
+  "domain": "carental.ru",
+  "slug": "carental-ru",
+  "score": 92,
+  "url": "reports/carental-ru.html"
+ },
+ {
+  "domain": "carprice.ru",
+  "slug": "carprice-ru",
+  "score": 79,
+  "url": "reports/carprice-ru.html"
+ },
+ {
   "domain": "carprodt.com",
   "slug": "carprodt-com",
   "score": 52,
@@ -886,6 +952,18 @@
   "slug": "casadellapizza-md",
   "score": 74,
   "url": "reports/casadellapizza-md.html"
+ },
+ {
+  "domain": "cdk-srnd.su",
+  "slug": "cdk-srnd-su",
+  "score": 50,
+  "url": "reports/cdk-srnd-su.html"
+ },
+ {
+  "domain": "cdtrnd.ru",
+  "slug": "cdtrnd-ru",
+  "score": 41,
+  "url": "reports/cdtrnd-ru.html"
  },
  {
   "domain": "centr-klimata.md",
@@ -924,6 +1002,12 @@
   "url": "reports/chitai-gorod-ru.html"
  },
  {
+  "domain": "cinnabonrussia.com",
+  "slug": "cinnabonrussia-com",
+  "score": 59,
+  "url": "reports/cinnabonrussia-com.html"
+ },
+ {
   "domain": "ciocarlia.md",
   "slug": "ciocarlia-md",
   "score": 79,
@@ -940,6 +1024,12 @@
   "slug": "cityclub-md",
   "score": 73,
   "url": "reports/cityclub-md.html"
+ },
+ {
+  "domain": "coffee-like.com",
+  "slug": "coffee-like-com",
+  "score": 71,
+  "url": "reports/coffee-like-com.html"
  },
  {
   "domain": "coffeeman.ru",
@@ -972,6 +1062,12 @@
   "url": "reports/conserve-md.html"
  },
  {
+  "domain": "corax-group.ru",
+  "slug": "corax-group-ru",
+  "score": 71,
+  "url": "reports/corax-group-ru.html"
+ },
+ {
   "domain": "craftpub.md",
   "slug": "craftpub-md",
   "score": 74,
@@ -988,6 +1084,12 @@
   "slug": "croitordentalclinic-md",
   "score": 74,
   "url": "reports/croitordentalclinic-md.html"
+ },
+ {
+  "domain": "csmedica.ru",
+  "slug": "csmedica-ru",
+  "score": 76,
+  "url": "reports/csmedica-ru.html"
  },
  {
   "domain": "cun.md",
@@ -1014,6 +1116,12 @@
   "url": "reports/davincidental-md.html"
  },
  {
+  "domain": "ddt-rostov.ru",
+  "slug": "ddt-rostov-ru",
+  "score": 82,
+  "url": "reports/ddt-rostov-ru.html"
+ },
+ {
   "domain": "decorcentr.com",
   "slug": "decorcentr-com",
   "score": 77,
@@ -1024,6 +1132,18 @@
   "slug": "dedpihto-md",
   "score": 68,
   "url": "reports/dedpihto-md.html"
+ },
+ {
+  "domain": "defile.ru",
+  "slug": "defile-ru",
+  "score": 74,
+  "url": "reports/defile-ru.html"
+ },
+ {
+  "domain": "dekol-mebel.ru",
+  "slug": "dekol-mebel-ru",
+  "score": 67,
+  "url": "reports/dekol-mebel-ru.html"
  },
  {
   "domain": "delident.ru",
@@ -1080,6 +1200,12 @@
   "url": "reports/detmir-ru.html"
  },
  {
+  "domain": "detsad4.ru",
+  "slug": "detsad4-ru",
+  "score": 48,
+  "url": "reports/detsad4-ru.html"
+ },
+ {
   "domain": "dex-it.ru",
   "slug": "dex-it-ru",
   "score": 70,
@@ -1102,6 +1228,12 @@
   "slug": "diplomat-med-md",
   "score": 77,
   "url": "reports/diplomat-med-md.html"
+ },
+ {
+  "domain": "divan.ru",
+  "slug": "divan-ru",
+  "score": 73,
+  "url": "reports/divan-ru.html"
  },
  {
   "domain": "divus.md",
@@ -1138,6 +1270,12 @@
   "slug": "domokon-net",
   "score": 85,
   "url": "reports/domokon-net.html"
+ },
+ {
+  "domain": "donplot.ru",
+  "slug": "donplot-ru",
+  "score": 68,
+  "url": "reports/donplot-ru.html"
  },
  {
   "domain": "donrechflot.com",
@@ -1182,10 +1320,22 @@
   "url": "reports/duval-md.html"
  },
  {
+  "domain": "dyatkovo.ru",
+  "slug": "dyatkovo-ru",
+  "score": 70,
+  "url": "reports/dyatkovo-ru.html"
+ },
+ {
   "domain": "e-apteka.md",
   "slug": "e-apteka-md",
   "score": 52,
   "url": "reports/e-apteka-md.html"
+ },
+ {
+  "domain": "easystep.ru",
+  "slug": "easystep-ru",
+  "score": 59,
+  "url": "reports/easystep-ru.html"
  },
  {
   "domain": "echiprot.com",
@@ -1230,16 +1380,34 @@
   "url": "reports/edem-md.html"
  },
  {
+  "domain": "effekt-energo.ru",
+  "slug": "effekt-energo-ru",
+  "score": 74,
+  "url": "reports/effekt-energo-ru.html"
+ },
+ {
   "domain": "efitness.md",
   "slug": "efitness-md",
   "score": 86,
   "url": "reports/efitness-md.html"
  },
  {
+  "domain": "eldorado.ru",
+  "slug": "eldorado-ru",
+  "score": 71,
+  "url": "reports/eldorado-ru.html"
+ },
+ {
   "domain": "electronica.othod.org",
   "slug": "electronica-othod-org",
   "score": 76,
   "url": "reports/electronica-othod-org.html"
+ },
+ {
+  "domain": "elementleasing.ru",
+  "slug": "elementleasing-ru",
+  "score": 70,
+  "url": "reports/elementleasing-ru.html"
  },
  {
   "domain": "elitemed.md",
@@ -1276,6 +1444,12 @@
   "slug": "estheticfactory-md",
   "score": 71,
   "url": "reports/estheticfactory-md.html"
+ },
+ {
+  "domain": "etalon-avto.pro",
+  "slug": "etalon-avto-pro",
+  "score": 89,
+  "url": "reports/etalon-avto-pro.html"
  },
  {
   "domain": "euro-rabota.md",
@@ -1404,6 +1578,12 @@
   "url": "reports/farba-md.html"
  },
  {
+  "domain": "farfor.ru",
+  "slug": "farfor-ru",
+  "score": 77,
+  "url": "reports/farfor-ru.html"
+ },
+ {
   "domain": "fcprinciple.ru",
   "slug": "fcprinciple-ru",
   "score": 68,
@@ -1428,6 +1608,18 @@
   "url": "reports/fluid-md.html"
  },
  {
+  "domain": "fmagnus.org",
+  "slug": "fmagnus-org",
+  "score": 83,
+  "url": "reports/fmagnus-org.html"
+ },
+ {
+  "domain": "fortuna-distillery.com",
+  "slug": "fortuna-distillery-com",
+  "score": 86,
+  "url": "reports/fortuna-distillery-com.html"
+ },
+ {
   "domain": "forumclinic.md",
   "slug": "forumclinic-md",
   "score": 47,
@@ -1450,6 +1642,12 @@
   "slug": "furtuna-pro",
   "score": 76,
   "url": "reports/furtuna-pro.html"
+ },
+ {
+  "domain": "galamart.ru",
+  "slug": "galamart-ru",
+  "score": 73,
+  "url": "reports/galamart-ru.html"
  },
  {
   "domain": "galaxia.md",
@@ -1482,6 +1680,12 @@
   "url": "reports/genom-eko-ru.html"
  },
  {
+  "domain": "geodom.online",
+  "slug": "geodom-online",
+  "score": 62,
+  "url": "reports/geodom-online.html"
+ },
+ {
   "domain": "geologorazvedka.site",
   "slug": "geologorazvedka-site",
   "score": 92,
@@ -1498,6 +1702,18 @@
   "slug": "ges-dubossary-ru",
   "score": 68,
   "url": "reports/ges-dubossary-ru.html"
+ },
+ {
+  "domain": "gkovd.ru",
+  "slug": "gkovd-ru",
+  "score": 65,
+  "url": "reports/gkovd-ru.html"
+ },
+ {
+  "domain": "glav-dostavka.ru",
+  "slug": "glav-dostavka-ru",
+  "score": 77,
+  "url": "reports/glav-dostavka-ru.html"
  },
  {
   "domain": "glavsnab.md",
@@ -1668,6 +1884,12 @@
   "url": "reports/ilforno-md.html"
  },
  {
+  "domain": "ilpatio.ru",
+  "slug": "ilpatio-ru",
+  "score": 67,
+  "url": "reports/ilpatio-ru.html"
+ },
+ {
   "domain": "imebelpmr.ru",
   "slug": "imebelpmr-ru",
   "score": 59,
@@ -1690,6 +1912,12 @@
   "slug": "infinitum-tour-com",
   "score": 58,
   "url": "reports/infinitum-tour-com.html"
+ },
+ {
+  "domain": "ingos.ru",
+  "slug": "ingos-ru",
+  "score": 80,
+  "url": "reports/ingos-ru.html"
  },
  {
   "domain": "interactivecenter.ru",
@@ -1734,6 +1962,18 @@
   "url": "reports/iremont161-ru.html"
  },
  {
+  "domain": "iself.pro",
+  "slug": "iself-pro",
+  "score": 89,
+  "url": "reports/iself-pro.html"
+ },
+ {
+  "domain": "istudio-rostov.ru",
+  "slug": "istudio-rostov-ru",
+  "score": 62,
+  "url": "reports/istudio-rostov-ru.html"
+ },
+ {
   "domain": "itn.md",
   "slug": "itn-md",
   "score": 55,
@@ -1762,6 +2002,18 @@
   "slug": "kakieokna-md",
   "score": 52,
   "url": "reports/kakieokna-md.html"
+ },
+ {
+  "domain": "kanzler-style.ru",
+  "slug": "kanzler-style-ru",
+  "score": 89,
+  "url": "reports/kanzler-style-ru.html"
+ },
+ {
+  "domain": "kapmed.ru",
+  "slug": "kapmed-ru",
+  "score": 58,
+  "url": "reports/kapmed-ru.html"
  },
  {
   "domain": "karatepmr.org",
@@ -1836,6 +2088,12 @@
   "url": "reports/kotofoto-ru.html"
  },
  {
+  "domain": "kover.ru",
+  "slug": "kover-ru",
+  "score": 76,
+  "url": "reports/kover-ru.html"
+ },
+ {
   "domain": "kozlovna.md",
   "slug": "kozlovna-md",
   "score": 58,
@@ -1854,10 +2112,22 @@
   "url": "reports/krasnoeibeloe-ru.html"
  },
  {
+  "domain": "kristofer.ru",
+  "slug": "kristofer-ru",
+  "score": 70,
+  "url": "reports/kristofer-ru.html"
+ },
+ {
   "domain": "kservice.info",
   "slug": "kservice-info",
   "score": 53,
   "url": "reports/kservice-info.html"
+ },
+ {
+  "domain": "kuchenland.ru",
+  "slug": "kuchenland-ru",
+  "score": 71,
+  "url": "reports/kuchenland-ru.html"
  },
  {
   "domain": "kuku.md",
@@ -1876,6 +2146,12 @@
   "slug": "kurtev-pro",
   "score": 74,
   "url": "reports/kurtev-pro.html"
+ },
+ {
+  "domain": "kuvalda.ru",
+  "slug": "kuvalda-ru",
+  "score": 52,
+  "url": "reports/kuvalda-ru.html"
  },
  {
   "domain": "kvadra-pmr.com",
@@ -1980,6 +2256,12 @@
   "url": "reports/lotushotel-md.html"
  },
  {
+  "domain": "loudsound.ru",
+  "slug": "loudsound-ru",
+  "score": 59,
+  "url": "reports/loudsound-ru.html"
+ },
+ {
   "domain": "lr-garage.ru",
   "slug": "lr-garage-ru",
   "score": 62,
@@ -1998,6 +2280,12 @@
   "url": "reports/lursan-com.html"
  },
  {
+  "domain": "lusio.ru",
+  "slug": "lusio-ru",
+  "score": 73,
+  "url": "reports/lusio-ru.html"
+ },
+ {
   "domain": "luxstroy.md",
   "slug": "luxstroy-md",
   "score": 85,
@@ -2014,6 +2302,18 @@
   "slug": "magnit-info-ru",
   "score": 64,
   "url": "reports/magnit-info-ru.html"
+ },
+ {
+  "domain": "magnit.com",
+  "slug": "magnit-com",
+  "score": 73,
+  "url": "reports/magnit-com.html"
+ },
+ {
+  "domain": "magnit.ru",
+  "slug": "magnit-ru",
+  "score": 64,
+  "url": "reports/magnit-ru.html"
  },
  {
   "domain": "magnumdent.md",
@@ -2040,6 +2340,12 @@
   "url": "reports/makcm-ru.html"
  },
  {
+  "domain": "mamadonna.ru",
+  "slug": "mamadonna-ru",
+  "score": 64,
+  "url": "reports/mamadonna-ru.html"
+ },
+ {
   "domain": "markapmr.ru",
   "slug": "markapmr-ru",
   "score": 64,
@@ -2064,16 +2370,34 @@
   "url": "reports/matras-pmr-ru.html"
  },
  {
+  "domain": "matrasvita.ru",
+  "slug": "matrasvita-ru",
+  "score": 70,
+  "url": "reports/matrasvita-ru.html"
+ },
+ {
   "domain": "maximpasha.md",
   "slug": "maximpasha-md",
   "score": 68,
   "url": "reports/maximpasha-md.html"
  },
  {
+  "domain": "maximumtest.ru",
+  "slug": "maximumtest-ru",
+  "score": 79,
+  "url": "reports/maximumtest-ru.html"
+ },
+ {
   "domain": "maxtravel.md",
   "slug": "maxtravel-md",
   "score": 73,
   "url": "reports/maxtravel-md.html"
+ },
+ {
+  "domain": "mbshop.su",
+  "slug": "mbshop-su",
+  "score": 68,
+  "url": "reports/mbshop-su.html"
  },
  {
   "domain": "mc.md",
@@ -2100,10 +2424,22 @@
   "url": "reports/mdental-md.html"
  },
  {
+  "domain": "mebelform.ru",
+  "slug": "mebelform-ru",
+  "score": 67,
+  "url": "reports/mebelform-ru.html"
+ },
+ {
   "domain": "mebelmall.net",
   "slug": "mebelmall-net",
   "score": 50,
   "url": "reports/mebelmall-net.html"
+ },
+ {
+  "domain": "med-centr.su",
+  "slug": "med-centr-su",
+  "score": 58,
+  "url": "reports/med-centr-su.html"
  },
  {
   "domain": "medart.md",
@@ -2154,6 +2490,18 @@
   "url": "reports/memory-jct-md.html"
  },
  {
+  "domain": "metaenergy.ru",
+  "slug": "metaenergy-ru",
+  "score": 94,
+  "url": "reports/metaenergy-ru.html"
+ },
+ {
+  "domain": "mi-shop.com",
+  "slug": "mi-shop-com",
+  "score": 91,
+  "url": "reports/mi-shop-com.html"
+ },
+ {
   "domain": "mikof-pmr.com",
   "slug": "mikof-pmr-com",
   "score": 91,
@@ -2164,6 +2512,12 @@
   "slug": "milano-md",
   "score": 59,
   "url": "reports/milano-md.html"
+ },
+ {
+  "domain": "mir-kubikov.ru",
+  "slug": "mir-kubikov-ru",
+  "score": 56,
+  "url": "reports/mir-kubikov-ru.html"
  },
  {
   "domain": "mirax.md",
@@ -2188,6 +2542,12 @@
   "slug": "mirsveta-md",
   "score": 67,
   "url": "reports/mirsveta-md.html"
+ },
+ {
+  "domain": "mixit.ru",
+  "slug": "mixit-ru",
+  "score": 80,
+  "url": "reports/mixit-ru.html"
  },
  {
   "domain": "mkomanda.com",
@@ -2244,6 +2604,12 @@
   "url": "reports/mtt-ru.html"
  },
  {
+  "domain": "multivarka.pro",
+  "slug": "multivarka-pro",
+  "score": 50,
+  "url": "reports/multivarka-pro.html"
+ },
+ {
   "domain": "mup-gorimushestvo.org",
   "slug": "mup-gorimushestvo-org",
   "score": 55,
@@ -2298,6 +2664,12 @@
   "url": "reports/neuroscan-md.html"
  },
  {
+  "domain": "newmed61.ru",
+  "slug": "newmed61-ru",
+  "score": 70,
+  "url": "reports/newmed61-ru.html"
+ },
+ {
   "domain": "nikba.com",
   "slug": "nikba-com",
   "score": 92,
@@ -2308,6 +2680,12 @@
   "slug": "niponauto-md",
   "score": 68,
   "url": "reports/niponauto-md.html"
+ },
+ {
+  "domain": "nochnye-grezi.ru",
+  "slug": "nochnye-grezi-ru",
+  "score": 65,
+  "url": "reports/nochnye-grezi-ru.html"
  },
  {
   "domain": "oboi-pmr.ru",
@@ -2406,10 +2784,22 @@
   "url": "reports/onepricecoffee-com.html"
  },
  {
+  "domain": "online.metro-cc.ru",
+  "slug": "online-metro-cc-ru",
+  "score": 64,
+  "url": "reports/online-metro-cc-ru.html"
+ },
+ {
   "domain": "oooxakep.ru",
   "slug": "oooxakep-ru",
   "score": 77,
   "url": "reports/oooxakep-ru.html"
+ },
+ {
+  "domain": "opartgallery.ru",
+  "slug": "opartgallery-ru",
+  "score": 70,
+  "url": "reports/opartgallery-ru.html"
  },
  {
   "domain": "organic-fruit.md",
@@ -2446,6 +2836,12 @@
   "slug": "panchev-semena-com",
   "score": 59,
   "url": "reports/panchev-semena-com.html"
+ },
+ {
+  "domain": "pansionat-dobro.ru",
+  "slug": "pansionat-dobro-ru",
+  "score": 89,
+  "url": "reports/pansionat-dobro-ru.html"
  },
  {
   "domain": "parkhotel.md",
@@ -2500,6 +2896,12 @@
   "slug": "pitcofe-ru",
   "score": 55,
   "url": "reports/pitcofe-ru.html"
+ },
+ {
+  "domain": "pitcoffee.ru",
+  "slug": "pitcoffee-ru",
+  "score": 86,
+  "url": "reports/pitcoffee-ru.html"
  },
  {
   "domain": "pivo-bendery.com",
@@ -2614,6 +3016,12 @@
   "slug": "pravo61-ru",
   "score": 47,
   "url": "reports/pravo61-ru.html"
+ },
+ {
+  "domain": "premiumhotelrostov.ru",
+  "slug": "premiumhotelrostov-ru",
+  "score": 70,
+  "url": "reports/premiumhotelrostov-ru.html"
  },
  {
   "domain": "primdent.md",
@@ -2778,6 +3186,12 @@
   "url": "reports/ritual-granit-info.html"
  },
  {
+  "domain": "rnd.klinikaexpert.ru",
+  "slug": "rnd-klinikaexpert-ru",
+  "score": 88,
+  "url": "reports/rnd-klinikaexpert-ru.html"
+ },
+ {
   "domain": "rocketseo.md",
   "slug": "rocketseo-md",
   "score": 85,
@@ -2812,6 +3226,12 @@
   "slug": "rostov-gorod-ru",
   "score": 52,
   "url": "reports/rostov-gorod-ru.html"
+ },
+ {
+  "domain": "rostov-na-donu.voxelpro.ru",
+  "slug": "rostov-na-donu-voxelpro-ru",
+  "score": 80,
+  "url": "reports/rostov-na-donu-voxelpro-ru.html"
  },
  {
   "domain": "rostov.alexfitness.ru",
@@ -2872,6 +3292,12 @@
   "slug": "sahtiraspol-org",
   "score": 71,
   "url": "reports/sahtiraspol-org.html"
+ },
+ {
+  "domain": "sakura-auto.com",
+  "slug": "sakura-auto-com",
+  "score": 58,
+  "url": "reports/sakura-auto-com.html"
  },
  {
   "domain": "salcioara.md",
@@ -3096,6 +3522,12 @@
   "url": "reports/superdent-md.html"
  },
  {
+  "domain": "surfcoffee.ru",
+  "slug": "surfcoffee-ru",
+  "score": 73,
+  "url": "reports/surfcoffee-ru.html"
+ },
+ {
   "domain": "svp.md",
   "slug": "svp-md",
   "score": 79,
@@ -3166,6 +3598,12 @@
   "slug": "tesalia-md",
   "score": 65,
   "url": "reports/tesalia-md.html"
+ },
+ {
+  "domain": "tesoro-hotel.ru",
+  "slug": "tesoro-hotel-ru",
+  "score": 70,
+  "url": "reports/tesoro-hotel-ru.html"
  },
  {
   "domain": "thebox.md",
@@ -3312,6 +3750,12 @@
   "url": "reports/twoguyscoffee-md.html"
  },
  {
+  "domain": "ulcom.ru",
+  "slug": "ulcom-ru",
+  "score": 91,
+  "url": "reports/ulcom-ru.html"
+ },
+ {
   "domain": "unix.md",
   "slug": "unix-md",
   "score": 68,
@@ -3394,6 +3838,12 @@
   "slug": "voltacom-ru",
   "score": 58,
   "url": "reports/voltacom-ru.html"
+ },
+ {
+  "domain": "vrostovezhit.ru",
+  "slug": "vrostovezhit-ru",
+  "score": 82,
+  "url": "reports/vrostovezhit-ru.html"
  },
  {
   "domain": "waterhouse-pmr.com",
