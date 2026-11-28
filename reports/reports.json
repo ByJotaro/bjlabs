@@ -150,6 +150,12 @@
   "url": "reports/5d5cea33b6d42-site123-me.html"
  },
  {
+  "domain": "93.ru",
+  "slug": "93-ru",
+  "score": 65,
+  "url": "reports/93-ru.html"
+ },
+ {
   "domain": "abakus-center.ru",
   "slug": "abakus-center-ru",
   "score": 74,
@@ -792,6 +798,12 @@
   "url": "reports/argumentkazan-ru.html"
  },
  {
+  "domain": "arh-grad.ru",
+  "slug": "arh-grad-ru",
+  "score": 70,
+  "url": "reports/arh-grad-ru.html"
+ },
+ {
   "domain": "arhdiz.com",
   "slug": "arhdiz-com",
   "score": 59,
@@ -850,6 +862,12 @@
   "slug": "artershop-com",
   "score": 65,
   "url": "reports/artershop-com.html"
+ },
+ {
+  "domain": "artgroup-krd.ru",
+  "slug": "artgroup-krd-ru",
+  "score": 85,
+  "url": "reports/artgroup-krd-ru.html"
  },
  {
   "domain": "artkamin.ru",
@@ -1054,6 +1072,12 @@
   "slug": "autotuning-md",
   "score": 80,
   "url": "reports/autotuning-md.html"
+ },
+ {
+  "domain": "avagroup.ru",
+  "slug": "avagroup-ru",
+  "score": 83,
+  "url": "reports/avagroup-ru.html"
  },
  {
   "domain": "avangard-sp.ru",
@@ -2340,6 +2364,12 @@
   "url": "reports/darimed-md.html"
  },
  {
+  "domain": "darstroy-yug.ru",
+  "slug": "darstroy-yug-ru",
+  "score": 79,
+  "url": "reports/darstroy-yug-ru.html"
+ },
+ {
   "domain": "davincidental.md",
   "slug": "davincidental-md",
   "score": 92,
@@ -2700,6 +2730,12 @@
   "url": "reports/doctor-mazur-com.html"
  },
  {
+  "domain": "dogma.ru",
+  "slug": "dogma-ru",
+  "score": 30,
+  "url": "reports/dogma-ru.html"
+ },
+ {
   "domain": "dokterclinic.ru",
   "slug": "dokterclinic-ru",
   "score": 59,
@@ -2806,6 +2842,12 @@
   "slug": "dopline-ru",
   "score": 79,
   "url": "reports/dopline-ru.html"
+ },
+ {
+  "domain": "dostoyanie23.ru",
+  "slug": "dostoyanie23-ru",
+  "score": 64,
+  "url": "reports/dostoyanie23-ru.html"
  },
  {
   "domain": "dou20.ru",
@@ -3130,6 +3172,12 @@
   "slug": "eftgroup-ru",
   "score": 62,
   "url": "reports/eftgroup-ru.html"
+ },
+ {
+  "domain": "ek-invest.ru",
+  "slug": "ek-invest-ru",
+  "score": 79,
+  "url": "reports/ek-invest-ru.html"
  },
  {
   "domain": "eko-kvartal.ru",
@@ -3502,6 +3550,12 @@
   "slug": "famident-ru",
   "score": 74,
   "url": "reports/famident-ru.html"
+ },
+ {
+  "domain": "family-yug.ru",
+  "slug": "family-yug-ru",
+  "score": 82,
+  "url": "reports/family-yug-ru.html"
  },
  {
   "domain": "fantes.ru",
@@ -3900,6 +3954,12 @@
   "url": "reports/gigas-su.html"
  },
  {
+  "domain": "gik23.ru",
+  "slug": "gik23-ru",
+  "score": 76,
+  "url": "reports/gik23-ru.html"
+ },
+ {
   "domain": "giovane-clinic.ru",
   "slug": "giovane-clinic-ru",
   "score": 77,
@@ -3910,6 +3970,12 @@
   "slug": "gk-clinic-ru",
   "score": 67,
   "url": "reports/gk-clinic-ru.html"
+ },
+ {
+  "domain": "gk-europeya.ru",
+  "slug": "gk-europeya-ru",
+  "score": 67,
+  "url": "reports/gk-europeya-ru.html"
  },
  {
   "domain": "gkovd.ru",
@@ -4378,6 +4444,18 @@
   "slug": "implantterra-md",
   "score": 61,
   "url": "reports/implantterra-md.html"
+ },
+ {
+  "domain": "inamp.gov.md",
+  "slug": "inamp-gov-md",
+  "score": 71,
+  "url": "reports/inamp-gov-md.html"
+ },
+ {
+  "domain": "incitystroy.ru",
+  "slug": "incitystroy-ru",
+  "score": 76,
+  "url": "reports/incitystroy-ru.html"
  },
  {
   "domain": "indiraschool.ru",
@@ -8112,10 +8190,22 @@
   "url": "reports/sistersdent-md.html"
  },
  {
+  "domain": "sk-bauinvest.ru",
+  "slug": "sk-bauinvest-ru",
+  "score": 82,
+  "url": "reports/sk-bauinvest-ru.html"
+ },
+ {
   "domain": "sk-pobeda.ru",
   "slug": "sk-pobeda-ru",
   "score": 83,
   "url": "reports/sk-pobeda-ru.html"
+ },
+ {
+  "domain": "sk-sreda.ru",
+  "slug": "sk-sreda-ru",
+  "score": 89,
+  "url": "reports/sk-sreda-ru.html"
  },
  {
   "domain": "skgarantiya.ru",
@@ -8524,6 +8614,12 @@
   "slug": "thebox-md",
   "score": 100,
   "url": "reports/thebox-md.html"
+ },
+ {
+  "domain": "theholistonhotel.com",
+  "slug": "theholistonhotel-com",
+  "score": 92,
+  "url": "reports/theholistonhotel-com.html"
  },
  {
   "domain": "thepetrov.tilda.ws",
@@ -9162,6 +9258,24 @@
   "url": "reports/xn-7kcajezzhczgbcd2b-xn-p1ai.html"
  },
  {
+  "domain": "xn----7sbapwaizjrfhgp.xn--p1ai",
+  "slug": "xn-7sbapwaizjrfhgp-xn-p1ai",
+  "score": 74,
+  "url": "reports/xn-7sbapwaizjrfhgp-xn-p1ai.html"
+ },
+ {
+  "domain": "xn----8sbavghkeou.xn--p1ai",
+  "slug": "xn-8sbavghkeou-xn-p1ai",
+  "score": 79,
+  "url": "reports/xn-8sbavghkeou-xn-p1ai.html"
+ },
+ {
+  "domain": "xn----8sbavuo1agn.xn--p1ai",
+  "slug": "xn-8sbavuo1agn-xn-p1ai",
+  "score": 65,
+  "url": "reports/xn-8sbavuo1agn-xn-p1ai.html"
+ },
+ {
   "domain": "xn----8sbqjihpfaj5a7n.xn--p1ai",
   "slug": "xn-8sbqjihpfaj5a7n-xn-p1ai",
   "score": 79,
@@ -9387,6 +9501,12 @@
   "domain": "лазер-штамп.рф",
   "slug": ".html",
   "score": 83,
+  "url": "reports/.html.html"
+ },
+ {
+  "domain": "любимыйдом.рф",
+  "slug": ".html",
+  "score": 59,
   "url": "reports/.html.html"
  },
  {
